@@ -1,0 +1,7 @@
+{
+  "id": "FlightMeasurementCourse_Flight",
+  "name": "FlightMeasurementCourse_Flight",
+  "path": "measurements",
+  "expression": "avg(avg(normalized.data.course))",
+  "srcType": "Flight"
+}

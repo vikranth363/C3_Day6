@@ -1,0 +1,7 @@
+{
+  "id": "FlightMeasurementKnots_Flight",
+  "name": "FlightMeasurementKnots_Flight",
+  "path": "measurements",
+  "expression": "avg(avg(normalized.data.kts))",
+  "srcType": "Flight"
+}

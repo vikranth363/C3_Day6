@@ -1,0 +1,12 @@
+{
+  "id": "FlightEventTypeLightTurbulence_Flight",
+  "name": "FlightEventTypeLightTurbulence",
+  "description": "The Turbulence-Light events from the flight events",
+  "srcType": "Flight",
+  "tsDecl": {
+    "data": "events",
+    "start": "start",
+    "treatment": "COUNT",
+    "filter": "eventCode == 'TL'"
+  }
+}

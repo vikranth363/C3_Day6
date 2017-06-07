@@ -1,0 +1,8 @@
+{
+  "id" : "SolarEnergyProduction_SolarPanel",
+  "name" : "SolarEnergyProduction",
+  "description" : "A metric for the solar energy production of a single panel.",
+  "srcType" : "SolarPanel",
+  "path" : "energyMeasurementSeries",
+  "expression" : "sum(sum(normalized.data.quantity))"
+}

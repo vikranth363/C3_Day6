@@ -1,0 +1,8 @@
+{
+  "id": "AverageFlightAltitude_Flight",
+  "name": "AverageFlightAltitude",
+  "description": "The average altitude of the flights",
+  "srcType": "Flight",
+  "path": "measurements",
+  "expression": "avg(normalized.data.altitude)"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "FlightEventTypeMediumTurbulence_Flight",
+  "name": "FlightEventTypeMediumTurbulence",
+  "description": "The Turbulence-Medium events from the flight events",
+  "srcType": "Flight",
+  "tsDecl": {
+    "data": "events",
+    "start": "start",
+    "treatment": "COUNT",
+    "filter": "eventCode == 'TM'"
+  }
+}

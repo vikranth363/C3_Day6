@@ -1,0 +1,13 @@
+{
+  "id" : "AbnormalActivity_SolarPanel",
+  "name" : "AbnormalActivity",
+  "description" : "A metric to detect the abnormnal activity of panel",
+  "srcType" : "SolarPanel",
+  "path" : "energyMeasurementSeries",
+  "tsDecl" : {
+    "data" : "data",
+    "treatment" : "INTEGRAL",
+    "start" : "start",
+    "value" : "quantity < 0.001 ? 1 : 0"
+  }
+}

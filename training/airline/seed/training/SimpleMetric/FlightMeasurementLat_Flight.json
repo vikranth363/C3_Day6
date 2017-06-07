@@ -1,0 +1,7 @@
+{
+  "id": "FlightMeasurementLat_Flight",
+  "name": "FlightMeasurementLat_Flight",
+  "path": "measurements",
+  "expression": "avg(avg(normalized.data.latitude))",
+  "srcType": "Flight"
+}

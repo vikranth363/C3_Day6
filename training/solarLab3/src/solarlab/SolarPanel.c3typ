@@ -1,0 +1,43 @@
+/*
+ * Copyright 2009-2017 C3, Inc. dba C3 IoT (www.c3iot.com). All Rights Reserved.
+ * This material, including without limitation any software, is the confidential trade secret
+ * and proprietary information of C3 IoT and its licensors. Reproduction, use and distribution
+ * of this material in any form is strictly prohibited except as set forth in a written
+ * license agreement with C3 IoT and/or its authorized distributors.
+ * This product may be covered by one or more U.S. patents or pending patent applications.
+ */
+
+entity type SolarPanel mixes MetricEvaluatable schema name 'SOLAR' {
+
+  /**
+   * A unique serial number associated with the Solar Panel
+   */
+  serialNumber : !string
+
+  /**
+   * The physical dimensions of the solar panel
+   */
+  widthInches  : double
+  lengthInches : double
+
+  /**
+   * The building with which this solar panel is associated
+   */
+  building     : Building
+
+  /*
+   * The series representing the measurements of production by this panel.
+   */
+  energyMeasurementSeries: [SolarEnergyMeasurementSeries](panel)
+
+
+  /**
+   * Simple function to calculate and return the area of a solar panel.
+   */
+  calculateAreaSquareFeet: function(solarPanel: SolarPanel): double js server
+
+  /**
+   * Function to calculate and return the area of all solar panels.
+   */
+  calculateTotalAreaSquareFeet: function(): double js server
+}

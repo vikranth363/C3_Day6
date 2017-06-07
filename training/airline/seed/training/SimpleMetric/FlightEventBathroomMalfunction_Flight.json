@@ -1,0 +1,12 @@
+{
+  "id": "FlightEventTypeBathroomMalfunction_Flight",
+  "name": "FlightEventTypeBathroomMalfunction",
+  "description": "The bathroom malfunctions from the flight events",
+  "srcType": "Flight",
+  "tsDecl": {
+    "data": "events",
+    "start": "start",
+    "treatment": "COUNT",
+    "filter": "eventCode == 'BM'"
+  }
+}

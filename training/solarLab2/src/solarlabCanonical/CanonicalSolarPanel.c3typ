@@ -1,0 +1,9 @@
+
+type CanonicalSolarPanel mixes Canonical<CanonicalSolarPanel> {
+
+  serialNumberC : string
+  widthInchesC  : double
+  lengthInchesC : double
+  buildingC     : string
+
+}

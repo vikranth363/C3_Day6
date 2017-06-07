@@ -1,0 +1,10 @@
+
+type TransformSolarPanelCanonicalToSolarPanel mixes SolarPanel transforms CanonicalSolarPanel {
+
+  id           : ~ expression "serialNumberC"
+  serialNumber : ~ expression "concat('SN_', serialNumberC)"
+  widthInches  : ~ expression "widthInchesC"
+  lengthInches : ~ expression "lengthInchesC"
+  building     : ~ expression "{id : 'buildingC'}"
+
+}

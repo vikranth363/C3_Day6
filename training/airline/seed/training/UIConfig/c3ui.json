@@ -1,0 +1,28 @@
+{
+    "id": "airline",
+    "applications": [
+        {
+            "id": "airline"
+        },
+        {
+            "id": "C3Tools"
+        }
+    ],
+    "environments": [
+        {
+            "id": "dev",
+            "session": {
+                "cache": "LocalStorage"
+            },
+            "site": {
+                "renderTo": "body"
+            },
+            "connection": {
+                "cache": false
+            },
+            "c3Tools": true,
+            "designer": true,
+            "acl": false
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+/**
+ * Each entry represents a discrete measurement for a period of time.
+ */
+@db(compactType=true,
+    datastore='cassandra',
+    partitionKeyField='parent',
+    persistenceOrder='start',
+    persistDuplicates=false,
+    shortId=true,
+    shortIdReservationRange=1000000)
+
+entity type SolarEnergyMeasurement mixes TimeseriesDataPoint<SolarEnergyMeasurementSeries> schema name 'SOLAR_SEM' {
+
+  start    : datetime
+  end      : datetime
+
+  /**
+   * Average kWh
+   * //This is required! Duration overlap
+   */
+  @ts(treatment='rate')
+  quantity : double
+
+}

@@ -1,0 +1,7 @@
+{
+  "id": "FlightMeasurementLong_Flight",
+  "name": "FlightMeasurementLong_Flight",
+  "path": "measurements",
+  "expression": "avg(avg(normalized.data.longitude))",
+  "srcType": "Flight"
+}

@@ -1,0 +1,9 @@
+
+type CanonicalSolarEnergyMeasurement mixes Canonical<CanonicalSolarEnergyMeasurement> {
+
+  solarPanelC : string
+  startC      : datetime
+  endC        : datetime
+  quantityC   : double
+
+}

@@ -1,0 +1,92 @@
+/*
+ * Copyright 2009-2017 C3, Inc. dba C3 IoT (www.c3iot.com). All Rights Reserved.
+ * This material, including without limitation any software, is the confidential trade secret
+ * and proprietary information of C3 IoT and its licensors. Reproduction, use and distribution
+ * of this material in any form is strictly prohibited except as set forth in a written
+ * license agreement with C3 IoT and/or its authorized distributors.
+ * This product may be covered by one or more U.S. patents or pending patent applications.
+ */
+
+/**
+ * Flight between two airports on a specific date/time with scheduled and
+ * actual departure/arrival information. Includes telemetry measurements
+ * and events that occurred during flight.
+ */
+entity type Flight mixes MetricEvaluatable schema name "FLIGHT" {
+
+ /**
+  * Type of aircraft
+  */
+  aircraft:                  Aircraft
+
+ /**
+  * Flight route from departure to arrival airport
+  */
+  route:                     Route
+
+ /**
+  * Scheduled departure date and time
+  */
+  scheduledDepartureTime:    datetime
+
+ /**
+  * Scheduled arrival date and time
+  */
+  scheduledArrivalTime:      datetime
+
+ /**
+  * Scheduled duration
+  */
+  scheduledDuration:         double stored calc 'scheduledArrivalTime - scheduledDepartureTime'
+
+ /**
+  * Actual departure time
+  */
+  actualDepartureTime:       datetime
+
+ /**
+  * Actual arrival time
+  */
+  actualArrivalTime:         datetime
+
+ /**
+  * Actual duration
+  */
+  actualDuration:            double stored calc 'actualArrivalTime - actualDepartureTime'
+
+ /**
+  * Flight recorder measurements
+  */
+  measurements:              [FlightMeasurementSeries](flight)
+
+ /**
+  * Events encountered during flight
+  */
+  events:                    [FlightEvent](flight)
+
+ /**
+  * List of airports flights have taken off from
+  *
+  * @return list of airports from which flights departed
+  */
+  departureAirports:         function() : [string] js server
+
+ /**
+  * Average flight delay for a given airport
+  *
+  * @param airport
+  *          Airport code
+  *
+  * @return the average delay at airport
+  *
+  * @see Airport
+  */
+  averageDelay:              function(airport: Airport) : double js server
+
+ /**
+  * Aircraft model with least delay
+  *
+  * @return the aircraft model
+  */
+  aircraftWithLeastDelay:    function(): string js server
+}

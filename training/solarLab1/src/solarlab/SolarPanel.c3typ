@@ -1,0 +1,18 @@
+entity type SolarPanel mixes MetricEvaluatable schema name 'SOLAR' {
+
+  /**
+   * A unique serial number associated with the Solar Panel
+   */
+  serialNumber : !string
+
+  /**
+   * The physical dimensions of the solar panel
+   */
+  widthInches  : double
+  lengthInches : double
+
+  /**
+   * The building with which this solar panel is associated
+   */
+  building     : Building
+}

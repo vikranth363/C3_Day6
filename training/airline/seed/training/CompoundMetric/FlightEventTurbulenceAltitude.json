@@ -1,0 +1,5 @@
+{
+  "id": "FlightEventTurbulenceAltitude",
+  "name": "FlightEventTurbulenceAltitude",
+  "expression": "available(FlightEventTurbulence) * AverageFlightAltitude"
+}

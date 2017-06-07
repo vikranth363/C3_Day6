@@ -1,0 +1,34 @@
+/*
+ * Copyright 2009-2017 C3, Inc. dba C3 IoT (www.c3iot.com). All Rights Reserved.
+ * This material, including without limitation any software, is the confidential trade secret
+ * and proprietary information of C3 IoT and its licensors. Reproduction, use and distribution
+ * of this material in any form is strictly prohibited except as set forth in a written
+ * license agreement with C3 IoT and/or its authorized distributors.
+ * This product may be covered by one or more U.S. patents or pending patent applications.
+ */
+
+/**
+ * Flight event series header
+ */
+extendable entity type FlightMeasurementSeries mixes TimeseriesHeader<FlightMeasurement> schema name 'FMSERIES' {
+
+ /**
+  * {@link Flight.id}
+  */
+  flight:    Flight
+
+ /**
+  * Granularity of interval data
+  */
+  interval:  string
+
+ /**
+  * Source of timeseries data
+  */
+  origin:    string
+
+ /**
+  * Treatment of timeseries data points
+  */
+  treatment: string enum('previous', 'rate', 'integral')
+}

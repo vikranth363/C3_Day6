@@ -1,0 +1,5 @@
+{
+  "id": "FlightEventTurbulence",
+  "name": "FlightEventTurbulence",
+  "expression": "or(FlightEventLightTurbulence_Flight, FlightEventMediumTurbulence_Flight)"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "FlightMeasurementMPH_Flight",
+  "name": "FlightMeasurementMPH_Flight",
+  "path": "measurements",
+  "expression": "avg(avg(normalized.data.mph))",
+  "srcType": "Flight"
+}
