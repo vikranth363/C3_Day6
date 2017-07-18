@@ -1,0 +1,6 @@
+{
+  "name": "solarLab",
+  "description": "Solar Lab Code",
+  "author": "Charles Mourani, Maximus Choi",
+  "dependencies": ["uiFramework", "tools"]
+}

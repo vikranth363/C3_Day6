@@ -1,0 +1,6 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "Training Class",
+  "dependencies": { "base" : "7.6.1+51" }
+}
