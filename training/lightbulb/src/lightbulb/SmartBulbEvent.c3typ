@@ -1,1 +1,8 @@
-entity type SmartBulbEvent schema name "SMRT_BLB_EVNT" 
+entity type SmartBulbEvent schema name "SMRT_BLB_EVNT" {
+
+	smartBulb:SmartBulb
+
+	eventCode: string
+
+	eventType: string
+}

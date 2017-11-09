@@ -1,0 +1,4 @@
+entity type SmartBulbToEventRelation mixes TimedIntervalRelation<SmartBulb, SmartBulbEvent> schema name "SMRT_BLB_EVENT_RLTN" {
+	smartBulb:SmartBulb
+	event: SmartBulbEvent
+}

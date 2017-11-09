@@ -7,5 +7,5 @@ temperatureUOM: Unit
 voltageUOM: Unit
 bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb, id)
 bulbStatus: [SmartBulbStatusSet] (smartBulb, id)
-
+bulbEvents: [SmartBulbToEventRelation](smartBulb)
 }
