@@ -1,2 +1,5 @@
 entity type SmartBulbStatusSet mixes TimedValueHistory<SmartBulb>, Integer schema name "SMRT_BLB_STTS_ST"
-{smartBulb:SmartBulb}
+{
+	smartBulb:SmartBulb
+	status: SmartBulbStatus
+}

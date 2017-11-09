@@ -5,7 +5,13 @@ lumensUOM: Unit
 powerUOM: Unit
 temperatureUOM: Unit
 voltageUOM: Unit
+
+@db(timedValueHistoryField = "bulbStatusHistory", order="descending(to_UTC(timestamp))")
+bulbStatus: SmartBulbStatus
+
 bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb, id)
-bulbStatus: [SmartBulbStatusSet] (smartBulb, id)
+bulbStatusHistory: [SmartBulbStatusSet] (smartBulb, id)
 bulbEvents: [SmartBulbToEventRelation](smartBulb)
+
+
 }
