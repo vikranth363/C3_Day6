@@ -1,0 +1,1 @@
+type SmartBulbStatus mixes TimedValue, Integer 
