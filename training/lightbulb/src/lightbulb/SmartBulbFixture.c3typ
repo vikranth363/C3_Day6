@@ -1,0 +1,8 @@
+entity type SmartBulbFixture extends Fixture type key "SMRT_BLB_FXTR" {
+	
+	SN: string
+	fixture: string
+	end: datetime
+	start: datetime
+  
+  }

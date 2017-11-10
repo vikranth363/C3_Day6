@@ -1,0 +1,11 @@
+type TransformCanonicalSmartBulbFixtureToSmartBulbFixture mixes SmartBulbFixture transforms CanonicalSmartBulbFixture {
+
+	SN:~ expression {id:"SN"}
+
+	fixture: ~ expression "fixture"
+
+	start:~expression "start"
+
+	end: ~expression "end"
+
+}

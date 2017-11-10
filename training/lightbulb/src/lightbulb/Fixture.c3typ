@@ -10,7 +10,7 @@
 /**
  * A single fixture in which a single {@link LightBulb} may be connected.
  */
-entity type Fixture schema name "FXTR" {
+ extendable entity type Fixture schema name "FXTR" {
 
   /**
    * The {@link Apartment} in which this fixture is located.
