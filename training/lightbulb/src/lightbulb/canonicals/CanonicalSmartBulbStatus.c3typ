@@ -1,0 +1,5 @@
+type CanonicalSmartBulbStatus mixes Canonical<CanonicalSmartBulbStatus> {
+	TS:datetime
+	SN: string
+	Status: integer
+}
