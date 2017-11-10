@@ -1,0 +1,8 @@
+type CanonicalSmartBulb mixes Canonical<CanonicalSmartBulb> {
+SN: string
+Manufacturer: string
+BulbType: string
+StartDate: datetime
+Latitude: double
+Longitude: double
+}
