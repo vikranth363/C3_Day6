@@ -1,0 +1,9 @@
+type CanonicalSmartBulbEvent mixes Canonical<CanonicalSmartBulbEvent> {
+
+end: datetime
+start: datetime
+eventCode: string
+eventType: string
+smartBulb: SmartBulb
+  
+}
