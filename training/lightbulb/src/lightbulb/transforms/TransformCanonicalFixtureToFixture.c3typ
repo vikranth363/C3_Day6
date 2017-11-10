@@ -1,0 +1,4 @@
+type TransformCanonicalFixtureToFixture mixes Fixture transforms CanonicalFixture {
+	id: ~expression "fixture"
+	apartment: ~expression {id: "apartment"}
+}
