@@ -1,17 +1,78 @@
-extendable entity type SmartBulb extends LightBulb type key "SMRT_BLB" {
-latitude: double
-longitude:double
-lumensUOM: Unit
-powerUOM: Unit
-temperatureUOM: Unit
-voltageUOM: Unit
+/*
+ * Copyright 2009-2017 C3, Inc. dba C3 IoT (www.c3iot.com). All Rights Reserved.
+ * This material, including without limitation any software, is the confidential trade secret
+ * and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+ * of this material in any form is strictly prohibited except as set forth in a written
+ * license agreement with C3 IoT and/or its authorized distributors.
+ * This product may be covered by one or more U.S. patents or pending patent applications.
+ */
 
-@db(timedValueHistoryField = "bulbStatusHistory", order="descending(to_UTC(timestamp))")
-bulbStatus: SmartBulbStatus
+/**
+ * A single light bulb capable of measuring various properties, including power consumption, light output, etc.
+ */
+entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_BLB" {
 
-bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb, id)
-bulbStatusHistory: [SmartBulbStatusSet] (smartBulb, id)
-bulbEvents: [SmartBulbToEventRelation](smartBulb)
+  /**
+   * This bulb's historical measurements.
+   */
+  bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
 
+  /**
+   * This bulb's historical events.
+   */
+  bulbEvents: [SmartBulbEvent](smartBulb)
+
+  /**
+   * The latitude of this bulb.
+   */
+  latitude: double
+
+  /**
+   * The longitude of this bulb.
+   */
+  longitude: double
+
+  /**
+   * The unit of measurement used for this bulb's light output measurements.
+   */
+  lumensUOM: Unit
+
+  /**
+   * The unit of measurement used for this bulb's power consumption measurements.
+   */
+  powerUOM: Unit
+
+  /**
+   * The unit of measurement used for this bulb's temperature measurements.
+   */
+  temperatureUOM: Unit
+
+  /**
+   * The unit of measurement used for this bulb's voltage measurements.
+   */
+  voltageUOM: Unit
+
+  /**
+   * This smart bulb's status history in a descending order.
+   */
+  @db(order='descending(toUTC(timestamp))')
+  bulbStatusSet: [SmartBulbStatusSet](parent)
+
+  /**
+   * Latest status of this bulb.
+   */
+  @db(timedValueHistoryField='bulbStatusSet')
+  bulbStatus: SmartBulbStatus
+
+  /**
+   * A SmartBulb is associated to a {@link Fixture} through a LightBulbToFixtureRelation.
+   */
+  @db(order='descending(toUTC(start)), descending(toUTC(end))')
+  fixtureHistory: [LightBulbToFixtureRelation](from)
+
+  /**
+   * The current Fixture to which this bulb is attached.
+   */
+  currentFixture: Fixture stored calc 'fixtureHistory[0].to' schema name 'FXTR'
 
 }
