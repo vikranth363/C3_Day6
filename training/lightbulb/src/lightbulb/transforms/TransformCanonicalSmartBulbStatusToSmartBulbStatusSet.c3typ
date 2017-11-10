@@ -1,5 +1,6 @@
 type TransformCanonicalSmartBulbStatusToSmartBulbStatus mixes SmartBulbStatusSet transforms CanonicalSmartBulbStatus {
 
+	id: ~expression {id: "TS"}
 	parent: ~expression {id : "SN"}
 	timestamp: ~expression "TS"
 	value: ~expression "Status"
