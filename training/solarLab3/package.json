@@ -1,6 +1,0 @@
-{
-  "name": "solarLab3",
-  "description": "Solar Lab Code",
-  "author": "C3IoT",
-  "dependencies": ["uiFramework", "tools"]
-}

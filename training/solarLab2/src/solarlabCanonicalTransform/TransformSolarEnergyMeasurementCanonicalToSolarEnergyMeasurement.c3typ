@@ -1,9 +1,0 @@
-
-type TransformSolarEnergyMeasurementCanonicalToSolarEnergyMeasurment mixes SolarEnergyMeasurement transforms CanonicalSolarEnergyMeasurement {
-
-  parent   : ~ expression {id : "concat(solarPanelC, '_SERIES')"}
-  start    : ~ expression "dateTime(startC)"
-  end      : ~ expression "dateTime(startC) + period(1, 'DAY')"
-  quantity : ~ expression "quantityC"
-
-}

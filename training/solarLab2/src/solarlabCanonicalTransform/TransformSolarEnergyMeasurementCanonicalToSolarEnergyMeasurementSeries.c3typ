@@ -1,9 +1,0 @@
-
-type TransformSolarEnergyMeasurementCanonicalToSolarEnergyMeasurmentSeries mixes SolarEnergyMeasurementSeries transforms CanonicalSolarEnergyMeasurement {
-
-  id        : ~ expression "concat(solarPanelC, '_SERIES')"
-  panel     : ~ expression {id : "solarPanelC"}
-  origin    : ~ expression "'c3iot_training'"
-  treatment : ~ expression "'PREVIOUS'"
-
-}
