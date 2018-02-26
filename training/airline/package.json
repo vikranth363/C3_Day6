@@ -2,5 +2,5 @@
   "name": "airline",
   "description": "Application Training",
   "author": "Maggie Wang, Maximus Choi",
-  "dependencies": ["foundation", "uiFramework", "tools"]
+  "dependencies": ["standardDependencies"]
 }
