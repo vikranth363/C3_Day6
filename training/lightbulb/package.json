@@ -2,5 +2,5 @@
   "name": "lightbulb",
   "description": "Application Training",
   "author": "C3 IoT",
-  "dependencies": ["foundation", "tools", "uiFramework", "exMachina"]
+  "dependencies": ["standardDependencies"]
 }
