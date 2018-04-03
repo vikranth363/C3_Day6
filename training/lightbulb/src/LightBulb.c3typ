@@ -1,0 +1,4 @@
+entity type LightBulb schema name 'LGHTBLB' {
+
+  manufacturer: string
+}

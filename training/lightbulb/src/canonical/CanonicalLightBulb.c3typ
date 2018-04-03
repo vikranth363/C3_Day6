@@ -1,0 +1,4 @@
+type CanonicalLightBulb mixes Canonical<CanonicalLightBulb> {
+
+  manufacturer: string
+}
