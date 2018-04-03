@@ -3,4 +3,4 @@ C3 training repository
 
 Welcome to the C3 Training Repository.
 
-Here we go!
+Here we go  !
