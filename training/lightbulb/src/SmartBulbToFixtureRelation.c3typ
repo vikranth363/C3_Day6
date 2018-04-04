@@ -1,0 +1,1 @@
+entity type SmartBulbToFixtureRelation mixes TimedIntervalRelation <SmartBulb, Fixture> schema name "SMRT_BLB_FXTR_RLTN" 
