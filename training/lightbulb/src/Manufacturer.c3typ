@@ -1,1 +1,1 @@
-Entity type Manufacturer mixes MetricEvaluatable schema name “MNFCT”
+entity type Manufacturer mixes MetricEvaluatable schema name "MNFCT"

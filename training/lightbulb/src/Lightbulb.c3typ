@@ -6,7 +6,7 @@ extendable entity type LightBulb schema name "LGHT_BLB" {
   /**
   * The name of this light bulb's manufacturer
   */
-  manufacturer: 	Manufacturer
+  manufacturer: Manufacturer
   /**   
   * The time at which this light bulb was manufactured
   */  
