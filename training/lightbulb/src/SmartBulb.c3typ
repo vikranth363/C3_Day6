@@ -11,22 +11,22 @@ latitude: double
 longitude: double
 
 /**
-*
+* Luminosità
 */
 lumensUOM: Unit
 
 /**
-*
+* Potenza
 */
 powerUOM: Unit
 
 /**
-*
+* Temperatura
 */
 temperatureUOM: Unit
 
 /**
-*
+* Voltaggio
 */
 voltageUOM: Unit
 
