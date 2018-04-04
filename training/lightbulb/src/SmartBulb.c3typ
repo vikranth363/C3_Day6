@@ -30,4 +30,12 @@ type SmartBulb extends LightBulb type key "SMRT_BLB" {
     * the units  that voltage will be measured in for the lightbulb
     */
     voltageUOM:         Unit
+
+    id: ~
+
+    fixture: Fixture
+
+    serialNumber: string
+
+    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb,id)
 }

@@ -1,0 +1,8 @@
+entity type SmartBulbEvent schema name "SMRT_BLB_EVNT" {
+    id: ~
+    bulb: LightBulb
+    eventCode: string enum('L','O','C')
+    eventType: string enum('Lightning','Outage','Connectivity')
+    start: datetime
+    end: datetime
+}

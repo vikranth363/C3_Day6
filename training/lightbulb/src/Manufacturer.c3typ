@@ -1,1 +1,5 @@
-entity type Manufacturer schema name "MNFCT"
+entity type Manufacturer schema name "MNFCT" {
+
+    name: string enum('Bell','GE','Philips')
+    
+}

@@ -1,4 +1,7 @@
 entity type Fixture schema name "FXTR" {
+
+    fixture: string
+
     /**
     * This is where the apartment is referenced
     */
