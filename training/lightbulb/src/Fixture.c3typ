@@ -5,7 +5,7 @@ entity type Fixture schema name "FXTR" {
     */
     apartment: Apartment
 
-    currentBulb: SmartBulbstored calc 'bulbHistory[0].(end == null).from'
+    currentBulb: SmartBulb stored calc 'bulbHistory[0].(end == null).from'
     
     @db(order='descending(toUTC(start)), descending(toUTC(end))')
     bulbHistory: [SmartBulbToFixtureRelation](to)
