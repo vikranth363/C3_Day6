@@ -31,11 +31,9 @@ type SmartBulb extends LightBulb type key "SMRT_BLB" {
     */
     voltageUOM:         Unit
 
-    id: ~
-
     fixture: Fixture
 
     serialNumber: string
 
-    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb,id)
+    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb,serialNumber)
 }

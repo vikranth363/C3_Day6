@@ -1,1 +1,1 @@
-entity type PowerGridStatusSet mixes TimedValueHistory<Building>, Integerschema name "PWR_GRD_STTS_ST"
+entity type PowerGridStatusSet mixes TimedValueHistory<Building>, Integer schema name "PWR_GRD_STTS_ST"
