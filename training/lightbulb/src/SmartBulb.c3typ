@@ -1,0 +1,33 @@
+type SmartBulb extends LightBulb type key 'SMRT_BLB' {
+
+/**
+* the latitude of the lightbulb
+*/
+latitude:    double
+
+/**
+* the longitude of the lightbulb
+*/
+longitude:    double
+
+/**
+* the unit of measurement used for this bulb's light output measurements.
+*/
+lumensUOM:    Unit
+
+/**
+* the unit of power used for this bulb's light output measurements.
+*/
+powerUOM:    Unit
+
+/**
+* the unit of temperature used for this bulb's light output measurements.
+*/
+temperatureUOM:    Unit
+
+/**
+* the unit of voltage used for this bulb's light output measurements.
+*/
+voltageUOM:    Unit
+
+}

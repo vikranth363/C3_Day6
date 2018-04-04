@@ -1,0 +1,18 @@
+extendable entity type LightBulb schema name "LGHT_BLB" {
+
+/**
+* the bulb type of the lightbulb
+*/
+bulbType:   string enum('LED', 'INCAN', 'CFL')
+
+/**
+* the manufacturer of the lightbulb
+*/
+manufacturer:   Manufacturer
+
+/**
+* the startdate of the lightbulb.
+*/
+startDate:  datetime
+
+}
