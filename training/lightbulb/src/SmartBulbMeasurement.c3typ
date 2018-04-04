@@ -7,4 +7,17 @@
     shortId=true, 
     shortIdReservationRange=1000000
 )
-entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name "SMRT_BLB_MSRMNT"
+entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name "SMRT_BLB_MSRMNT" {
+    
+    serialNumber: string
+
+    status: enum(0,1)
+
+    watts: double
+
+    lumens: double
+
+    voltage: double
+
+    temp: double
+}
