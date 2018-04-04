@@ -1,6 +1,6 @@
 {
   "name": "lightbulb",
   "description": "Application Training",
-  "author": "C3 IoT",
+  "author": "FrancescoDiGirolamo",
   "dependencies": ["standardDependencies"]
 }

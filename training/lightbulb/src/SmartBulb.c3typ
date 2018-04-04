@@ -1,0 +1,21 @@
+entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_BLB"
+{
+/**
+* Latitude
+*/
+latitude: double
+/**
+*long
+*/
+
+longitude: double
+
+lumensUOM: Unit
+
+powerUOM: Unit
+
+temperatureUOM: Unit
+
+voltageUOM: Unit
+
+}
