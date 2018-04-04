@@ -1,28 +1,18 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;}
-\margl1440\margr1440\vieww16560\viewh21000\viewkind0
-\deftab720
-\pard\pardeftab720\sl240\partightenfactor0
-
-\f0\fs20 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 extendable entity type LightBulb schema name "LGHT_BLB" \{  \cf0 \strokec0 \
-\cf2 \strokec2   /**\cf0 \strokec0 \
-\cf2 \strokec2   * The type of this light bulb\cf0 \strokec0 \
-\cf2 \strokec2   */  \cf0 \strokec0 \
-\cf2 \strokec2   bulbType: 	string \cf0 \strokec0  \cf2 \strokec2 enum('LED', 'INCAN', 'CFL')  \cf0 \strokec0 \
-\cf2 \strokec2   /**\cf0 \strokec0 \
-\cf2 \strokec2   * The name of this light bulb's manufacturer\cf0 \strokec0 \
-\cf2 \strokec2   */\cf0 \strokec0 \
-\cf2 \strokec2   manufacturer: 	Manufacturer\cf0 \strokec0 \
-\cf2 \strokec2   /**   \cf0 \strokec0 \
-\cf2 \strokec2   * The time at which this light bulb was manufactured\cf0 \strokec0 \
-\cf2 \strokec2   */  \cf0 \strokec0 \
-\cf2 \strokec2   startDate: 	datetime\
-  /**\
-  * The wattage of the lightbulb\
-  */\
-  wattage:	decimal\cf0 \strokec0 \
-\cf2 \strokec2 \}\cf0 \strokec0 \
+extendable entity type LightBulb schema name "LGHT_BLB" {  
+  /**
+  * The type of this light bulb
+  */  
+  bulbType: 	string  enum('LED', 'INCAN', 'CFL')  
+  /**
+  * The name of this light bulb's manufacturer
+  */
+  manufacturer: 	Manufacturer
+  /**   
+  * The time at which this light bulb was manufactured
+  */  
+  startDate: 	datetime
+  /**
+  * The wattage of the lightbulb
+  */
+  wattage:	decimal
 }
