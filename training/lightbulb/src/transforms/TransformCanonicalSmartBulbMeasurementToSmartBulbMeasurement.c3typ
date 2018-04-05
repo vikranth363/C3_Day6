@@ -10,7 +10,7 @@ type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurement mixes SmartBul
 
     status:         ~ expression "Status"
 
-    parent:         ~ expression "SN"
+    parent:         ~ expression "concat('SMBS_serialNo_',SN)"
 
     start:          ~ expression "TS"
 
