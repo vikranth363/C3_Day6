@@ -1,0 +1,7 @@
+type TransformCanonicalPowerGridStatusToBuilding mixes Building transforms CanonicalPowerGridStatus {
+
+    id:         ~expression "Building"
+
+    gridStatus  ~ expression {timestamp: "TS", value: "Status"}
+
+}
