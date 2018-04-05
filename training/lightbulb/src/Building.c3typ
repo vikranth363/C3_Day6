@@ -1,9 +1,0 @@
-entity type Building schema name "BLDG" {
-
-powerGridStatus: PowerGridStatus
-
-powerGridStatusSet: PowerGridStatusSet
-
-apartments: [Apartment](building)
-
-}

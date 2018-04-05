@@ -1,9 +1,0 @@
-entity type SmartBulbEvent schema name "SMRT_BLB_EVNT" {
-	
-	smartBulb: SmartBulb
-	eventCode: string
-	eventType: string
-	start: datetime
-	end: datetime
-
-}
