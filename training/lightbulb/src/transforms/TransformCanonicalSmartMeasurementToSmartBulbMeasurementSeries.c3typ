@@ -1,9 +1,9 @@
 type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurementSeries mixes SmartBulbMeasurementSeries transforms CanonicalSmartBulbMeasurement {
 
-  id: ~ expression "concat('SMBS_serialNo_',SN)"
+  id:         ~ expression "concat('SMBS_serialNo_',SN)"
 
-  treatment: ~ expression "'rate'"
+  treatment:  ~ expression "'rate'"
 
-  interval: ~ expression "'HOUR'"
+  interval:   ~ expression "'HOUR'"
 
 }

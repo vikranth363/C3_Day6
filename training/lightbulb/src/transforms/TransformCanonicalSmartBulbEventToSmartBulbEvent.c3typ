@@ -1,13 +1,13 @@
 type TransformCanonicalSmartBulbEventToSmartBulbEvent mixes SmartBulbEvent transforms CanonicalSmartBulbEve {
 
-  end: ~ expression "end"
+  end:        ~ expression "end"
 
-  start: ~ expression "start"
+  start:      ~ expression "start"
 
-  eventCode: ~ expression "eventCode"
+  eventCode:  ~ expression "eventCode"
 
-  eventType: ~ expression "eventType"
+  eventType:  ~ expression "eventType"
 
-  smartBulb: ~ expression { id: "bulb" }
+  smartBulb:  ~ expression { id: "bulb" }
 
 }

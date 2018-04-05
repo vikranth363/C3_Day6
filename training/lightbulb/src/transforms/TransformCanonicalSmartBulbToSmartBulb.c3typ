@@ -1,25 +1,25 @@
 type TransformCanonicalSmartBulbToSmartBulb mixes SmartBulb transforms CanonicalSmartBulb {
     
-    id:~ expression "SN"
+    id:             ~ expression "SN"
     
-    manufacturer:~ expression {id: "Manufacturer"}
+    manufacturer:   ~ expression {id: "Manufacturer"}
     
-    bulbType:~ expression "BulbType"
+    bulbType:       ~ expression "BulbType"
     
-    wattage: ~ expression "Wattage"
+    wattage:        ~ expression "Wattage"
     
-    startDate:~ expression "StartDate"
+    startDate:      ~ expression "StartDate"
     
-    lumensUOM:~ expression {id: "lumen"}
+    lumensUOM:      ~ expression {id: "lumen"}
     
-    powerUOM:~ expression {id: "watt"}
+    powerUOM:       ~ expression {id: "watt"}
     
-    temperatureUOM:~ expression {id: "degrees_fahrenheit"}
+    temperatureUOM: ~ expression {id: "degrees_fahrenheit"}
     
-    voltageUOM:~ expression {id: "volt"}
+    voltageUOM:     ~ expression {id: "volt"}
     
-    latitude:~ expression "Latitude"
+    latitude:       ~ expression "Latitude"
     
-    longitude: ~ expression "Longitude"
+    longitude:      ~ expression "Longitude"
 
 }

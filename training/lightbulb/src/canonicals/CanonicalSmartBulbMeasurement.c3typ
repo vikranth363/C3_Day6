@@ -1,16 +1,16 @@
 type CanonicalSmartBulbMeasurement mixes Canonical<CanonicalSmartBulbMeasurement> {
     
-    TS: datetime
+    TS:         datetime
 
-    SN: string
+    SN:         string
 
-    Status: int
+    Status:     int
 
-    Watts: double
+    Watts:      double
 
-    Lumens: double
+    Lumens:     double
 
-    Voltage: double
+    Voltage:    double
 
-    Temp: double
+    Temp:       double
 }

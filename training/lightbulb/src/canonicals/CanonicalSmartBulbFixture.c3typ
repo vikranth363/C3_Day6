@@ -1,10 +1,10 @@
 type CanonicalFixture mixes Canonical<CanonicalFixture> {
 
-    SN: string
+    SN:         string
 
-    fixture: string
+    fixture:    string
 
-    start: datetime
+    start:      datetime
 
-    end: datetime
+    end:        datetime
 }
