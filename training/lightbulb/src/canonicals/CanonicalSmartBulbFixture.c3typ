@@ -1,0 +1,10 @@
+type CanonicalSmartBulbFixture mixes Canonical<CanonicalSmartBulbFixture> {
+  //end time relation
+  end: datetime
+  // start time relation
+  start: datetime
+   //SN relation
+  SN: string
+   //fixture relation
+  fixture: string
+}

@@ -1,0 +1,6 @@
+type CanonicalPowerGridStatus mixes Canonical<CanonicalPowerGridStatus> {
+    
+    TS: datetime
+    building:   string
+    status: int
+    }
