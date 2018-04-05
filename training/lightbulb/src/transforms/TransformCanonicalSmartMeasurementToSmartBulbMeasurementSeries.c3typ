@@ -2,4 +2,8 @@ type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurementSeries mixes Sm
 
   id: ~ expression "concat('SMBS_serialNo_',SN)"
 
+  treatment: ~ expression "'rate'"
+
+  interval: ~ expression "'HOUR'"
+
 }
