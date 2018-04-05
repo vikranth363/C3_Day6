@@ -1,0 +1,12 @@
+entity type Fixture schema name "FXTR"
+{
+
+/**
+* This is where the apartment is referenced
+*/
+apartment:	Apartment
+currentBulb: SmartBulb stored calc 'bulbHistory[0].(end == null).from'
+@db(order='descending(toUTC(start)), descending(toUTC(end))')
+bulbHistory: [SmartBulbToFixtureRelation](to)
+
+}
