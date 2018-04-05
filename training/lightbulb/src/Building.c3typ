@@ -1,0 +1,8 @@
+entity type Building schema name "BLDNG" {
+  
+  @db(order='descending(timestamp)')
+  powerGridStatusSet: [PowerGridStatusSet](parent)
+  
+  @db(timedValueHistoryField='powerGridStatusSet')
+  powerGridStatus: PowerGridStatus
+}

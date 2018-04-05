@@ -1,1 +1,4 @@
-entity type Apartment schema name "APRTMNT"
+entity type Apartment schema name "APRTMNT" {
+  
+  building: Building
+}

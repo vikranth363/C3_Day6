@@ -1,5 +1,8 @@
 entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRTBLB" {
   
+  
+  bulbEvents: [SmartBulbEvent](smartBulb)
+  
   /**
   *  latitude of the location of the smartbulb
   **/

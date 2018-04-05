@@ -1,0 +1,15 @@
+@db(datastore='cassandra',
+    partitionKeyField='parent',
+    persistenceOrder='start',
+    persistDuplicates=false,
+    shortId=true,
+    shortIdReservationRange=100000)
+entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name "SMRT_BLB_MSRMNT" {
+  
+  status: int
+  watts: double
+  lumens: double
+  voltage: double
+  temperature: double
+}
+
