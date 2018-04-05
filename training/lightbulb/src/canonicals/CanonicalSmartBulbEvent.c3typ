@@ -1,15 +1,15 @@
 type CanonicalSmartBulbEvent mixes Canonical<CanonicalSmartBulbEvent> {
 
-    id: string
+    id:         string
 
-    bulb: string
+    bulb:       string
 
-    eventCode: string enum('O','L','C')
+    eventCode:  string enum('O','L','C')
 
-    eventType: string enum('Outage','Lightning','Connectivity')
+    eventType:  string enum('Outage','Lightning','Connectivity')
 
-    start: datetime
+    start:      datetime
 
-    end: datetime
+    end:        datetime
     
 }
