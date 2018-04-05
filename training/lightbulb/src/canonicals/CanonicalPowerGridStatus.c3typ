@@ -4,6 +4,6 @@ type CanonicalPowerGridStatus mixes Canonical<CanonicalPowerGridStatus> {
 
     Building: string
 
-    Status: enum(0,1)
+    Status: int
     
 }

@@ -4,7 +4,7 @@ type CanonicalSmartBulbMeasurement mixes Canonical<CanonicalSmartBulbMeasurement
 
     SN: string
 
-    Status: enum(0,1)
+    Status: int
 
     Watts: double
 
