@@ -1,0 +1,32 @@
+entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_BLB"
+{
+	/**
+	* The latitude of this bulb
+	*/
+	latitude:	double
+	
+	/**
+	* The longitude of this bulb
+	*/
+	longitude:	double
+	
+	/**
+	* The unit of measurement used for this bulb's light output measurements.
+	*/
+	lumensUOM:	Unit
+	
+	/**
+	* The unit of measurement used for this bulb's power measurement.
+	*/
+	powerUOM:	Unit
+	
+	/**
+	* The unit of measurement used for this bulb's temperature measurement.
+	*/
+	temperatureUOM:	Unit
+	
+	/**
+	* The unit of measurement used for this bulb's voltage measurement.
+	*/
+	voltageUOM:	Unit
+}

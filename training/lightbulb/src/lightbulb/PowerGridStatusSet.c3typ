@@ -1,0 +1,9 @@
+entity type PowerGridStatusSet mixes TimedValueHistory<Building>, Integer schema name "PWR_GRD_STTS_ST"{
+
+	/**
+	*	Status of the power grid
+	*/
+	status:	PowerGridStatus
+	
+	
+}

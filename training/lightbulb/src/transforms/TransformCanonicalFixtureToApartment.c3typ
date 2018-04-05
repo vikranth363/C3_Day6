@@ -1,0 +1,6 @@
+type TransformCanonicalFixtureToApartment mixes Apartment transforms CanonicalFixture{
+
+	id:			~ expression "apartment"
+	building:	~ expression {id: "building"}
+	
+}

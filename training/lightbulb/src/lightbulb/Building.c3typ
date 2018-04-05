@@ -1,0 +1,19 @@
+entity type Building schema name "BLDNG" {
+
+	/**
+	* Current power grid status for the building.
+	*/
+	@db(timedValueHistoryField='powerGridStatusHistory')
+	currentPowerGridStatus:	PowerGridStatus
+	
+	/**
+	* This building's power grid status history in a descending order.
+	*/
+	@db(order='descending(timestamp)')
+	powerGridStatusHistory:	[PowerGridStatusSet](parent)
+
+	/**
+	* Apartments that exist in the building.
+	*/
+	apartments:	[Apartment](building)
+}

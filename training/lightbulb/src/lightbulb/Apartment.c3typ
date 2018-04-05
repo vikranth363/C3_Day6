@@ -1,0 +1,10 @@
+entity type Apartment schema name "APRTMNT"{
+
+	/**
+	* The building where the apartment exists.
+	*/
+	building:	Building
+	
+	fixtures: [Fixture](apartment)
+	
+}

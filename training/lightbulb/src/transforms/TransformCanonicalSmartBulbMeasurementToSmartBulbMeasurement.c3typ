@@ -1,0 +1,9 @@
+type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurement mixes SmartBulbMeasurement transforms CanonicalSmartBulbMeasurement{
+
+	status:		~ expression "Status"
+	watts:		~ expression "Watts"
+	lumens:		~ expression "Lumens"
+	voltage:	~ expression "Voltage"
+	temp:		~ expression "Temp"
+	
+}
