@@ -1,0 +1,16 @@
+type CanonicalSmartBulbMeasurement mixes Canonical<CanonicalSmartBulbMeasurement> {
+    
+    TS: datetime
+
+    SN: string
+
+    Status: enum(0,1)
+
+    Watts: double
+
+    Lumens: double
+
+    Voltage: double
+
+    Temp: double
+}
