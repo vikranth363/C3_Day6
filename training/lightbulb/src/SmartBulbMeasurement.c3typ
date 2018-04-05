@@ -17,25 +17,30 @@ entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementS
     /**
     * The stauts of the measurement
     */
+    @ts(treatment='status')
     status: enum(0,1)
 
     /**
     * The power value
     */
+    @ts(treatment='watts')
     watts: double
 
     /**
     * The lumen value 
     */
+    @ts(treatment='lumens')
     lumens: double
 
     /**
     * The voltage value
     */
+    @ts(treatment='voltage')
     voltage: double
 
     /**
     * The temperature value
     */
+    @ts(treatment='rate')
     temp: double
 }

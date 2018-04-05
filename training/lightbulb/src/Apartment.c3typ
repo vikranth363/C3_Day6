@@ -8,6 +8,6 @@ entity type Apartment schema name "APRTMNT" {
     /**
     * Collection of fixtures of the apartment
     */
-    fixtures: [Fixture]
+    fixtures: [Fixture](apartment)
 
 }

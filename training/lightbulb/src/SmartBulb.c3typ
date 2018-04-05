@@ -44,5 +44,5 @@ type SmartBulb extends LightBulb type key "SMRT_BLB" {
     /**
     * The measurements of the smartbulb
     */
-    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb,serialNumber)
+    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
 }

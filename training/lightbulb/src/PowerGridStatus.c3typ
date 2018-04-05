@@ -1,3 +1,1 @@
-type PowerGridStatus mixes TimedValue, Integer {
-    building : Building
-}
+type PowerGridStatus mixes TimedValue, Integer 
