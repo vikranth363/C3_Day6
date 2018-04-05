@@ -1,3 +1,13 @@
 entity type Apartment schema name "APRTMNT" {
+
+    /**
+    * Building linked to the apartment
+    */
     building: Building
+
+    /**
+    * Collection of fixtures of the apartment
+    */
+    fixtures: [Fixture]
+
 }

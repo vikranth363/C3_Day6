@@ -9,15 +9,33 @@
 )
 entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name "SMRT_BLB_MSRMNT" {
     
+    /**
+    * The serial number of the smartbulb
+    */
     serialNumber: string
 
+    /**
+    * The stauts of the measurement
+    */
     status: enum(0,1)
 
+    /**
+    * The power value
+    */
     watts: double
 
+    /**
+    * The lumen value 
+    */
     lumens: double
 
+    /**
+    * The voltage value
+    */
     voltage: double
 
+    /**
+    * The temperature value
+    */
     temp: double
 }

@@ -2,38 +2,47 @@
 type SmartBulb extends LightBulb type key "SMRT_BLB" {
 
     /**
-    * the latitude of lightbulb
+    * the latitude of smartbulb
     */
     latitude:           double
 
     /**
-    * the longitude of lightbulb
+    * the longitude of smartbulb
     */
     longitude:          double
 
     /**
-    * the units that lumens will be measured in for the lightbulb
+    * the units that lumens will be measured in for the smartbulb
     */
     lumensUOM:          Unit
 
     /**
-    * the units  that power will be measured in for the lightbulb
+    * the units  that power will be measured in for the smartbulb
     */
     powerUOM:           Unit
 
     /**
-    * the units  that temperature will be measured in for the lightbulb
+    * the units  that temperature will be measured in for the smartbulb
     */
     temperatureUOM:     Unit
 
     /**
-    * the units  that voltage will be measured in for the lightbulb
+    * the units  that voltage will be measured in for the smartbulb
     */
     voltageUOM:         Unit
 
+    /**
+    * The smartbuld is fixed to a fixture or not
+    */
     fixture: Fixture
 
+    /**
+    * The serial number of the smartbulb
+    */
     serialNumber: string
 
+    /**
+    * The measurements of the smartbulb
+    */
     bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb,serialNumber)
 }

@@ -1,14 +1,18 @@
 entity type Fixture schema name "FXTR" {
 
-    fixture: string
-
     /**
     * This is where the apartment is referenced
     */
     apartment: Apartment
 
+    /**
+    * Current Bulb put on the fixture
+    */
     currentBulb: SmartBulb stored calc 'bulbHistory[0].(end == null).from'
-
+    
+    /**
+    * History base to the creation of the relationship between the fixture and the smartbulb
+    */
     @db(order='descending(toUTC(start)), descending(toUTC(end))')
     bulbHistory: [SmartBulbToFixtureRelation](to)
 }

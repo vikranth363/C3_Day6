@@ -1,12 +1,17 @@
 entity type Building schema name "BLDNG" {
 
     /**
+    * Collection of apartments of the building
+    */
+    apartments: [Apartments]
+
+    /**
     * powerGridStatus
     */
     powerGridStatus : PowerGridStatus
 
     /**
-    * powerGridStatusSet
+    * Collection of powerGridStatusSet of the building
     */
     powerGridStatusSet : [PowerGridStatusSet]
 
