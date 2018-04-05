@@ -1,0 +1,8 @@
+entity type Building mixes MetricEvaluatable schema name 'BLDNG' {
+  
+  apartments:    [Apartment](building, id)
+  gridStatusSet: [PowerGridStatusSet](parent, id)
+
+  @db(timedValueHistoryField='gridStatusSet')
+  gridStatus: PowerGridStatus
+}

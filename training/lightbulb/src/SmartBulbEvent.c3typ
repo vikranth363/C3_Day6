@@ -1,0 +1,8 @@
+entity type SmartBulbEvent mixes MetricEvaluatable schema name 'SMRT_BLB_EVNT' {
+  
+  end:       datetime
+  start:     datetime
+  eventCode: string
+  eventType: string
+  smartBulb: SmartBulb
+}
