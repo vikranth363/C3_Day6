@@ -1,6 +1,6 @@
-type TransformCanonicalSmartBulbEventToSmartBulbEvent mixes SmartBulbEvent transforms CanonicalSmartBulbEvent {
+type TransformCanonicalSmartBulbEventToSmartBulbEvent mixes SmartBulbEvent transforms CanonicalSmartBulbEve {
 
-  end: : ~ expression "end"
+  end: ~ expression "end"
 
   start: ~ expression "start"
 
@@ -8,6 +8,6 @@ type TransformCanonicalSmartBulbEventToSmartBulbEvent mixes SmartBulbEvent trans
 
   eventType: ~ expression "eventType"
 
-  smartBulb: : ~ expression { id: "bulb" }
+  smartBulb: ~ expression { id: "bulb" }
 
 }
