@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -32,4 +33,12 @@
    * The light bulb's wattage
    */
   wattage: decimal 
+=======
+extendable entity type LightBulb schema name "LGHT_BLB"
+{
+	bulbType: string enum('LED', 'INCAN', 'CFL')
+	manufacturer: Manufacturer
+	startDate: datetime
+	wattage: decimal
+>>>>>>> 39a74f7ae5921772cf96ed94833c2bec5e68a532
 }

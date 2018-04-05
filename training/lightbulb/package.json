@@ -1,6 +1,11 @@
 {
   "name": "lightbulb",
   "description": "Application Training",
+<<<<<<< HEAD
   "author": "C3 IoT",
   "dependencies": ["standardDependencies", "foundation", "tools", "uiFramework", "exMachina"]
+=======
+  "author": "C3IoT",
+  "dependencies": ["foundation","tools","uiFramework","exMachina"]
+>>>>>>> 39a74f7ae5921772cf96ed94833c2bec5e68a532
 }

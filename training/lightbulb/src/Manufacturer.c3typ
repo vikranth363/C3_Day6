@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -11,4 +12,6 @@
  * An company that manufacturers lightbulbs. 
  */
 
+=======
+>>>>>>> 39a74f7ae5921772cf96ed94833c2bec5e68a532
  entity type Manufacturer mixes MetricEvaluatable schema name "MNFCT"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -28,3 +29,13 @@
    @db(order='descending(toUTC(start)), descending(toUTC(end))') 
    bulbHistory: [SmartBulbToFixtureRelation](to)
  }
+=======
+entity type Fixture schema name "FXTR" {
+	apartment: Apartment
+
+	currentBulb: double stored calc 'bulbHistory[0].(end == null).from'
+
+	@db(order='descending(toUTC(start)), descending(toUTC(end))')
+	bulbHistory: [SmartBulbToFixtureRelation] (to)
+}
+>>>>>>> 39a74f7ae5921772cf96ed94833c2bec5e68a532

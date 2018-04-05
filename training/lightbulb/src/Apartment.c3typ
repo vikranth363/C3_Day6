@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -22,3 +23,6 @@
    */
    fixture: [Fixture](apartment)
  }
+=======
+ entity type Apartment schema name "APRTMNT"
+>>>>>>> 39a74f7ae5921772cf96ed94833c2bec5e68a532
