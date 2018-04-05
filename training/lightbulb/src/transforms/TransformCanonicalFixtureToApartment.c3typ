@@ -8,28 +8,11 @@
 ~*/
 
 /**
- * A single light bulb.
+ * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
  */
-extendable entity type LightBulb schema name "LGHT_BLB" {
+type TransformCanonicalFixtureToApartment mixes Apartment transforms CanonicalFixture {
 
-  /**
-   * The type of this light bulb.
-   */
-  bulbType: string enum('LED', 'INCAN', 'CFL')
-
-  /**
-   * The light bulb's wattage
-   */
-  wattage: decimal
-
-  /**
-   * The name of this light bulb's manufacturer.
-   */
-  manufacturer: Manufacturer
-
-  /**
-   * The time at which this light bulb was manufactured.
-   */
-  startDate: datetime
+  id:       ~ expression "apartment"
+  building: ~ expression { id: "building" }
 
 }
