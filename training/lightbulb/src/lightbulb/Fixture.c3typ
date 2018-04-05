@@ -28,4 +28,6 @@ entity type Fixture mixes MetricEvaluatable schema name "FXTR" {
   @db(order='descending(toUTC(start)), descending(toUTC(end))')
   bulbHistory: [SmartBulbToFixtureRelation](to)
 
+
+
 }
