@@ -1,0 +1,5 @@
+type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurementSeries mixes SmartBulbMeasurementSeries transforms CanonicalSmartBulbMeasurement {
+
+  id: ~ expression "concat('SMBS_serialNo_',SN)"
+
+}
