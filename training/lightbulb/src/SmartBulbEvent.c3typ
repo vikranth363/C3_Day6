@@ -1,27 +1,30 @@
+/**
+ * A single event that occurred to or about a single SmartBulb.
+ */
 entity type SmartBulbEvent schema name "SMRT_BLB_EVNT" {
 
   /**
-   * Time where the event ended.
+   * The time at which this event ended.
    */
   end: datetime
 
   /**
-   * Time where the event began.
+   * The time at which this event began.
    */
   start: datetime
 
   /**
-   * code to recognize the events
+   * The event code used to distinguish events.
    */
   eventCode: string
 
   /**
-   * Event type
+   * The type of this event.
    */
   eventType: string
 
   /**
-   * The SmartBulb in the event
+   * The SmartBulb connected to this event.
    */
   smartBulb: SmartBulb
 

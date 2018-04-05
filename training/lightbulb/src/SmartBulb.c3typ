@@ -32,4 +32,24 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
     */
   voltageUOM: Unit
   
+    /**
+   * This bulb's historical measurements.
+   */
+  bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
+
+  /**
+   * This bulb's historical events.
+   */
+  bulbEvents: [SmartBulbEvent](smartBulb)
+  
+    /**
+   * A SmartBulb is associated to a Fixture through a SmartBulbToFixtureRelation.
+   */
+  fixtureHistory: [SmartBulbToFixtureRelation](from)
+
+  /**
+   * The current Fixture to which this bulb is attached.
+   */
+  currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
+  
 }

@@ -1,1 +1,28 @@
-entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name "SMRT_BLB_MSRMNT"
+entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name 'SMRT_BLB_MSRMNT' {
+  
+  /**
+   * The measured number of lumens.
+   */
+  lumens: double
+
+  /**
+   * The measured power consumption.
+   */
+  power: double
+
+  /**
+   * The measured temperature.
+   */
+  temperature: double
+
+  /**
+   * The measured voltage.
+   */
+  voltage: double
+
+  /**
+   * The status of the smartbulb (on or off).
+   */
+
+  status: int
+}
