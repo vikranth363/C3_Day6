@@ -1,5 +1,0 @@
-entity type Apartment schema name "APRTMNT"
-{
-fixtures:[Fixture](apartment)
-building: Building
-}

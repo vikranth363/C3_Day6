@@ -1,5 +1,0 @@
-type PowerGridStatus mixes TimedValue, Integer
-{
-building: Building
-status: boolean
-}
