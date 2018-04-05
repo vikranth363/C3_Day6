@@ -1,0 +1,10 @@
+type CanonicalSmartBulb mixes Canonical<CanonicalSmartBulb> {
+
+  SN: string
+  Manufacturer: string
+  BulbType: string
+  Wattage: decimal
+  Latitude: decimal
+  Longitude: decimal
+  StartDate: datetime
+}

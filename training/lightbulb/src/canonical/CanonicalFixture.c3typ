@@ -1,0 +1,6 @@
+type CanonicalFixture mixes Canonical<CanonicalFixture> {
+  
+  fixture: string
+  apartment: string
+  building: string
+}
