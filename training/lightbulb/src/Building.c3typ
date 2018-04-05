@@ -1,0 +1,20 @@
+entity type Building mixes MetricEvaluatable schema name "BLDNG" {
+
+ /**
+   * The apartments that are inside this building.
+   */
+  apartments: [Apartment](building)
+  
+  /**
+   * This building's power grid status history in a descending order.
+   */
+  @db(order='descending(timestamp)')
+  gridStatusSet: [PowerGridStatusSet](parent)
+
+  /**
+   * Latest status of this building's power grid.
+   */
+  @db(timedValueHistoryField='gridStatusSet')
+  gridStatus: PowerGridStatus
+  
+  } 

@@ -1,0 +1,13 @@
+entity type Apartment mixes MetricEvaluatable schema name "APRTMNT" {
+
+  /**
+   * The Building apartment is located.
+   */
+  building: Building
+
+  /**
+   * list of fixtures in the  apartment.
+   */
+  fixtures: [Fixture] (apartment)
+
+}

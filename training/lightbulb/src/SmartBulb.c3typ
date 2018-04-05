@@ -1,0 +1,60 @@
+type SmartBulb extends LightBulb type key "SMRT_BLB"{
+
+/**
+ * the LATITUDE of the lightbulb.
+ */
+ 
+ latitude: double
+ 
+ /**
+ * the Longitude of the lightbulb.
+ */
+ 
+ longitude: double
+ 
+ /**
+ * the units that lumens will be measured in for the lightbulb
+ */
+ 
+ lumensUOM: Unit
+ 
+ /**
+ * the units that power will be measured in for the lightbulb
+ */
+ powerUOM:Unit
+ 
+ /**
+ * the units that temperature will be measured in for the lightbulb
+ */
+ temperatureUOM: Unit
+ 
+ 
+ /**
+ * the units that voltage will be measured in for the lightbulb
+ */
+ 
+ voltageUOM: Unit
+ 
+ /**
+   * This bulb's historical measurements.
+   */
+  bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
+
+  /**
+   * This bulb's historical events.
+   */
+  bulbEvents: [SmartBulbEvent](smartBulb)
+  
+    /**
+   * A SmartBulb is associated to a Fixture through a SmartBulbToFixtureRelation.
+   */
+  fixtureHistory: [SmartBulbToFixtureRelation](from)
+
+  /**
+   * The current Fixture to which this bulb is attached.
+   */
+  currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
+ 
+ }
+ 
+ 
