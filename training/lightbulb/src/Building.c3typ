@@ -1,0 +1,19 @@
+entity type Building mixes MetricEvaluatable schema name "BLDNG" {
+
+  /**
+   * The apartments that are inside this building.
+   */
+  apartments: [Apartment](building)
+  
+    /**
+   * Power grid status of building
+   */
+
+  gridStatusSet: [PowerGridStatusSet](parent)
+
+  /**
+   * PowerGridStatus
+   */
+  gridStatus: PowerGridStatus
+  
+  }

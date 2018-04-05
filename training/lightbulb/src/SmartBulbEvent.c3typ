@@ -1,0 +1,28 @@
+entity type SmartBulbEvent schema name "SMRT_BLB_EVNT" {
+
+  /**
+   * Time where the event ended.
+   */
+  end: datetime
+
+  /**
+   * Time where the event began.
+   */
+  start: datetime
+
+  /**
+   * code to recognize the events
+   */
+  eventCode: string
+
+  /**
+   * Event type
+   */
+  eventType: string
+
+  /**
+   * The SmartBulb in the event
+   */
+  smartBulb: SmartBulb
+
+}
