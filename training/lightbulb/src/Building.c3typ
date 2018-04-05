@@ -14,7 +14,7 @@ entity type Building schema name "BLDNG" {
     /**
     *
     */
-    apartments: [Apartments](building)
+    apartments: [Apartment](building)
 
 
 }
