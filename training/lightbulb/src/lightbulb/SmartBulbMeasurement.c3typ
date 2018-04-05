@@ -17,7 +17,7 @@
     compactType=true,
     shortIdReservationRange=100000)
 entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name 'SMRT_BLB_MSRMNT' {
-  
+
   /**
    * The measured number of lumens.
    */
