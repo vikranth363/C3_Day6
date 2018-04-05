@@ -1,0 +1,7 @@
+type TransformCanonicalPowerGridStatusToPowerGridStatus mixes PowerGridStatus transforms CanonicalPowerGridStatus {
+
+    timestamp:  ~ expression "TS"
+
+    value:      ~ expression "Status"
+
+}
