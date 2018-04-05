@@ -10,3 +10,4 @@
 /**
  * The status of the power grid for a {@link Building}  at a specific time.
  */
+type PowerGridStatus mixes TimedValue, Integer
