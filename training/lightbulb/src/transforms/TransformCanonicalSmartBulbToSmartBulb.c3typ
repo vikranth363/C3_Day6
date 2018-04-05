@@ -1,0 +1,18 @@
+/**
+ * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
+ */
+type TransformCanonicalFixtureToApartment mixes Apartment transforms CanonicalFixture {
+
+  id:       ~ expression "SN"
+  manufacturer: ~ expression { id: "Manufacturer" }
+  bulbType: ~ expression "BulbType"
+  wattage: ~ expression "Wattage"
+  startDate: ~ expression "StartDate"
+  lumensUOM: ~ expression {id: "lumen"}
+  powerUOM: ~ expression {id: "watt"}
+  temperatureUOM: ~ expression {id: "temperature"}
+  voltageUOM: ~ expression {id: "volt"}
+  latitude: ~ expression "Latitude"
+  longitute: ~ expression "Longitude"
+ 
+}
