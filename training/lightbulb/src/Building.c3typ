@@ -1,0 +1,6 @@
+entity type Building schema name "BLDNG"
+{
+apartments: [Apartment](building)
+powergridstatus: PowerGridStatus
+powergridstatusset: PowerGridStatusSet
+}

@@ -1,0 +1,6 @@
+extendable entity type SmartBulbMeasurementSeries mixes TimeseriesHeader<SmartBulbMeasurement> schema name "SMRT_BLB_MSRMNT_SRS"
+{
+smartbulb: SmartBulb
+start: datetime
+end: datetime
+}
