@@ -1,4 +1,4 @@
-type CanonicalSmartBulb mixes Canonical<CanonicalSmartBulb> {
+type CanonicalSmartBulbEvent mixes Canonical<CanonicalSmartBulbEvent> {
 
     id: string
 
