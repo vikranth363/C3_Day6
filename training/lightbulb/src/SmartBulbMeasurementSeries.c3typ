@@ -1,0 +1,7 @@
+extendable entity type SmartBulbMeasurementSeries mixes TimeseriesHeader<SmartBulbMeasurement> schema name "SMRT_BLB_MSRMNT_SRS" {
+
+    /**
+    *
+    */
+    smartBulb:  SmartBulb
+}

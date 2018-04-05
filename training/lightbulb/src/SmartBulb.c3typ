@@ -30,4 +30,8 @@ temperatureUOM:    Unit
 */
 voltageUOM:    Unit
 
+/**
+*
+*/
+measurements:   [SmartBulbMeasurementSeries](smartBulb)
 }

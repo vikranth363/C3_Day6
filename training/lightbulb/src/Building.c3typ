@@ -1,0 +1,20 @@
+entity type Building schema name "BLDNG" {
+
+    
+    /**
+    *
+    */
+    powerGridStatus:    PowerGridStatus
+
+    /**
+    *
+    */
+    powerGridStatusSet: [PowerGridStatusSet](parent)
+
+    /**
+    *
+    */
+    apartments: [Apartments](building)
+
+
+}

@@ -4,6 +4,11 @@ entity type Fixture schema name "FXTR" {
     *
     */
     apartment:  Apartment
+
+    /**
+    *
+    */
+    building:  Building
     
     /**
     *

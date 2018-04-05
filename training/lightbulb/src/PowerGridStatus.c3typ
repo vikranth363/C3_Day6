@@ -1,0 +1,17 @@
+type PowerGridStatus mixes TimedValue, Integer {
+
+    /**
+    *
+    */
+    timmeStamp: datetime
+
+    /**
+    *
+    */
+    building:   Building
+
+    /**
+    *
+    */
+    status:     boolean
+}
