@@ -1,0 +1,51 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+ * A single measurement taken from a single {@link SmartBulb}.
+ */
+@db(datastore='cassandra',
+    partitionKeyField='parent',
+    persistenceOrder='start',
+    persistDuplicates=false,
+    compactType=true,
+    shortIdReservationRange=100000)
+entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name 'SMRT_BLB_MSRMNT' {
+  
+  /**
+   * The measured number of lumens.
+   */
+  @ts(treatment='rate')
+  lumens: double
+
+  /**
+   * The measured power consumption.
+   */
+  @ts(treatment='rate')
+  power: double
+
+  /**
+   * The measured temperature.
+   */
+  @ts(treatment='rate')
+  temperature: double
+
+  /**
+   * The measured voltage.
+   */
+  @ts(treatment='rate')
+  voltage: double
+
+  /**
+   * The status of the smartbulb (on or off).
+   */
+
+  @ts(treatment='previous')
+  status: int
+}

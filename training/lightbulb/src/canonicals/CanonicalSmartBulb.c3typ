@@ -1,0 +1,48 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+* This type represents the raw data that will represent {@link SmartBulb} information.
+*/
+type CanonicalSmartBulb mixes Canonical<CanonicalSmartBulb> {
+  /**
+   * This represents the manufacturer of a {@link LightBulb}
+   */
+  Manufacturer: string
+
+  /**
+   * This represents the bulbType of a {@link LightBulb}
+   */
+  BulbType:     string
+
+   /**
+   * This represents the wattage of a {@link LightBulb}
+   */
+  Wattage:     decimal
+
+  /**
+   * This represents the id of a {@link LightBulb}
+   */
+  SN:           string
+
+  /**
+   * This represents the startDate of a {@link LightBulb}
+   */
+  StartDate:    datetime
+
+  /**
+   * This represents the latitude of a {@link SmartBulb}
+   */
+  Latitude:     double
+
+  /**
+   * This represents the longitude of a {@link SmartBulb}
+   */
+  Longitude:    double
+}

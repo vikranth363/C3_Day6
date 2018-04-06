@@ -1,0 +1,27 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulb} to the {@link SmartBulb} type.
+ */
+type TransformCanonicalSmartBulbToSmartBulb mixes SmartBulb transforms CanonicalSmartBulb {
+
+  id:              ~ expression "SN"
+  manufacturer:    ~ expression {id: "Manufacturer"}
+  bulbType:        ~ expression "BulbType"
+  wattage:         ~ expression "Wattage"
+  startDate:       ~ expression "StartDate"
+  latitude:        ~ expression "Latitude"
+  longitude:       ~ expression "Longitude"
+  lumensUOM:       ~ expression { id: "'lumen'" }
+  powerUOM:        ~ expression { id: "'watt'" }
+  temperatureUOM:  ~ expression { id: "'degrees_fahrenheit'" }
+  voltageUOM:      ~ expression { id: "'volt'" }
+
+}
