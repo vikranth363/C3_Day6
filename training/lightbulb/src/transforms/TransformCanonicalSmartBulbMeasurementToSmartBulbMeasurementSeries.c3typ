@@ -8,6 +8,13 @@
 ~*/
 
 /**
+<<<<<<< HEAD
+ * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
+ */
+type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurementSeries mixes SmartBulbMeasurementSeries transforms CanonicalSmartBulbMeasurement {
+  id:           ~ expression "concat('SMBS_Serial_No_',SN)"
+  smartBulb:    ~ expression {id: 'SN'}
+=======
  * This type encapsulates the data flow from the {@link CanonicalSmartBulbMeasurement} to the {@link SmartBulbMeasurementSeries} type.
  */
 type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurementSeries mixes SmartBulbMeasurementSeries transforms CanonicalSmartBulbMeasurement {
@@ -20,4 +27,5 @@ type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurementSeries mixes Sm
   interval:   ~ expression "'HOUR'"
   treatment:  ~ expression "'rate'"
 
+>>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
 }

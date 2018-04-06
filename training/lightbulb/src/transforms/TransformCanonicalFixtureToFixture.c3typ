@@ -7,10 +7,18 @@
 * This product may be covered by one or more U.S. patents or pending patent applications.
 ~*/
 
+<<<<<<< HEAD
+type TransformCanonicalFixtureToFixture mixes Fixture transforms CanonicalFixture {
+
+  id:           ~ expression "fixture"
+  apartment: ~ expression {id: "apartment"}
+
+=======
 /**
  * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
  */
 type TransformCanonicalFixtureToFixture mixes Fixture transforms CanonicalFixture {
   id:         ~ expression "fixture"
   apartment:  ~ expression { id: "apartment" }
+>>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
 }

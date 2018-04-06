@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+type CanonicalSmartBulbMeasurement mixes Canonical<CanonicalSmartBulbMeasurement> {
+TS:           datetime
+SN:           string
+Status:       integer
+Watts:        integer
+Lumens:       double
+Voltage:      integer
+Temp:         integer
+=======
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -46,4 +56,5 @@ type CanonicalSmartBulbMeasurement mixes Canonical<CanonicalSmartBulbMeasurement
    */
   Temp:     double
 
+>>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
 }

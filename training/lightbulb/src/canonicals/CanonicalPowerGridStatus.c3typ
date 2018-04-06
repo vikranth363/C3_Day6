@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+type CanonicalPowerGridStatus mixes Canonical<CanonicalPowerGridStatus> {
+TS:       datetime
+Building: string
+Status:   integer
+=======
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -25,4 +31,5 @@ type CanonicalPowerGridStatus mixes Canonical<CanonicalPowerGridStatus> {
    *  This represents the status ON or OFF (1 or 0) for the power grid of a {@Building}
    */
   Status:   int
+>>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
 }

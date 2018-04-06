@@ -8,6 +8,20 @@
 ~*/
 
 /**
+<<<<<<< HEAD
+ * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
+ */
+type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurement mixes SmartBulbMeasurement transforms CanonicalSmartBulbMeasurement {
+
+  parent:       ~ expression {id: "concat('SMBS_Serial_No_',SN)"}
+  start:        ~ expression "TS"
+  power:        ~ expression "Watts"
+  temperature:  ~ expression "Temp"
+  voltage:      ~ expression "Voltage"
+  status:       ~ expression "Status"
+  lumens:       ~ expression "Lumens"
+
+=======
  * This type encapsulates the data flow from the {@link CanonicalSmartBulbMeasurement} to the {@link SmartBulbMeasurement} type.
  */
 type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurement mixes SmartBulbMeasurement transforms CanonicalSmartBulbMeasurement {
@@ -24,4 +38,5 @@ type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurement mixes SmartBul
   start:        ~ expression "TS"
   end:          ~ expression "TS + period(1, 'HOUR')"
   status:       ~ expression "Status"
+>>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
 }

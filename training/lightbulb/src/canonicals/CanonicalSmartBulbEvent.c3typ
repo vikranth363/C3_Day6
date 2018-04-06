@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+type CanonicalSmartBulbEvent mixes Canonical<CanonicalSmartBulbEvent> {
+id:           string
+bulb:         string
+eventCode:    string
+eventType:    string
+start:        datetime
+end:          datetime
+=======
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -40,4 +49,5 @@ type CanonicalSmartBulbEvent mixes Canonical<CanonicalSmartBulbEvent> {
    * This represents a datetime to use as the end of a {@link SmartBulbEvent}
    */
   end:        datetime
+>>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
 }
