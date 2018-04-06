@@ -1,0 +1,5 @@
+type TransformCanonicalFixtureToBuilding mixes Building transforms CanonicalFixture {
+
+  id:       ~ expression "building"
+
+}

@@ -47,5 +47,5 @@ entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementS
    */
 
   @ts(treatment='previous')
-  status: int
+  status: integer
 }

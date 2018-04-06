@@ -1,0 +1,6 @@
+type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurementSeries mixes SmartBulbMeasurementSeries transforms CanonicalSmartBulbMeasurement {
+  id:         ~ expression "SN"
+  smartBulb:  ~ expression { id: "SN" }
+  interval:   ~ expression "'HOUR'"
+  treatment:  ~ expression "'rate'"
+  }

@@ -1,0 +1,7 @@
+type CanonicalSmartBulbFixture mixes Canonical<CanonicalSmartBulbFixture>
+{
+SN: string
+fixture: string
+start: datetime
+end: datetime
+}
