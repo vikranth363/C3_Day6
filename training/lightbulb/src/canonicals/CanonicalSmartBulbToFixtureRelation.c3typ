@@ -1,0 +1,21 @@
+type CanonicalSmartBulbToFixtureRelation mixes Canonical<CanonicalSmartBulbToFixtureRelation> {
+  /**
+   * This represents the id of a SmartBulb
+   */
+  SN:	string
+
+  /**
+   * Fixture ID
+   */
+  fixture:  string
+
+  /**
+   * Start of a SmartBulbToFixtureRelation
+   */
+  start:    datetime
+
+  /**
+   * End of a SmartBulbToFixtureRelation
+   */
+  end:      datetime
+}

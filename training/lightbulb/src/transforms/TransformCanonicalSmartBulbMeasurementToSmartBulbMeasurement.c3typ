@@ -1,0 +1,10 @@
+type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurement mixes SmartBulbMeasurement transforms CanonicalSmartBulbMeasurement {
+
+  parent:       ~ expression "SN"
+  lumens:       ~ expression "Lumens"
+  power:        ~ expression "Watts"
+  voltage:      ~ expression "Voltage"
+  temperature:  ~ expression "Temp"
+  start:        ~ expression "TS"
+  status:       ~ expression "Status"
+  }

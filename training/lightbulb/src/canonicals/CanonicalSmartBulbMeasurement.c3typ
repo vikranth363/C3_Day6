@@ -1,0 +1,17 @@
+type CanonicalSmartBulbEvent mixes Canonical<CanonicalSmartBulbEvent> {
+
+TS:	datetime
+
+SN:	string
+
+Status:	integer
+
+Watts:	double
+
+Lumens: double
+
+Voltage:	double
+
+Temp:	double
+
+}

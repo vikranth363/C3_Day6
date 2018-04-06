@@ -1,0 +1,16 @@
+type CanonicalPowerGridStatus mixes Canonical<CanonicalPowerGridStatus> {
+  /**
+   * This represents the id of a TimeStamp
+   */
+  TS:    datetime
+
+  /**
+   * This represents the id of an Status
+   */
+  Status:  string
+
+  /**
+   * This represents the id of a Building
+   */
+  building:   string
+}
