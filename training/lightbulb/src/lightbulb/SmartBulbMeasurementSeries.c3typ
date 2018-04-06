@@ -1,0 +1,25 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+ * A series of measurements taken from a single {@link SmartBulb}.
+ */
+extendable entity type SmartBulbMeasurementSeries mixes TimeseriesHeader<SmartBulbMeasurement> schema name "SMRT_BLB_MSRMNT_SRS" {
+  
+  /**
+   * The {@link SmartBulb} for which measurements were taken.
+   */
+  smartBulb: SmartBulb
+
+  /**
+   * The aggregation/disaggregation {@link Treatment} to use for the measurements.
+   */
+  treatment: string enum('previous', 'rate', 'integral')
+
+}

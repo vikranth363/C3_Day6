@@ -1,0 +1,28 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+ * This type represents the raw data that will represent {@link PowerGridStatus} information.
+ */
+type CanonicalPowerGridStatus mixes Canonical<CanonicalPowerGridStatus> {
+  /**
+   * This represents the datetime to use for the start of {@link PowerGridStatus}
+   */
+  TS:       datetime
+
+  /**
+   * This represents the id of the {@link Building}
+   */
+  Building: string
+
+  /**
+   *  This represents the status ON or OFF (1 or 0) for the power grid of a {@Building}
+   */
+  Status:   int
+}
