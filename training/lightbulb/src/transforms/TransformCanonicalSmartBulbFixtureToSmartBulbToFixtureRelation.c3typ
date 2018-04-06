@@ -10,13 +10,11 @@
 /**
  * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
  */
-type TransformCanonicalSmartBulbToSmartBulbEvent mixes SmartBulbEvent transforms CanonicalSmartBulbEvent {
+type TransformCanonicalSmartBulbFixtureToSmartBulbToFixtureRelation mixes SmartBulbToFixtureRelation transforms CanonicalSmartBulbFixture {
 
-  id:           ~ expression {id: "id"}
-  smartBulb:    ~ expression {id: "bulb"}
-  eventCode:    ~ expression "eventCode"
-  eventType:    ~ expression "eventType"
+  id:           ~ expression "concat(SN, fixture)"
+  from:         ~ expression {id: "SN"}
+  to:           ~ expression {id: "fixture"}
   start:        ~ expression "start"
   end:          ~ expression "end"
-
 }
