@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -57,14 +56,4 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
   /**
    * A SmartBulb is associated to a {@link Fixture} through a SmartBulbToFixtureRelation.
    */
-=======
-entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_BLB"
-{
-	latitude: double
-	longitude: double
-	lumensUOM: Unit
-	powerUOM: Unit
-	temperatureUOM: Unit
-	voltageUOM: Unit
->>>>>>> 39a74f7ae5921772cf96ed94833c2bec5e68a532
 }

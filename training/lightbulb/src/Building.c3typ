@@ -11,7 +11,7 @@
  * A single building containing many {@link Apartment}s.
  */
 
- entity type Building mixes MetricEvaluatable schema name "BLDNG" {
+entity type Building mixes MetricEvaluatable schema name "BLDNG" {
 
   /**
    * The apartments that are inside this building.
@@ -29,4 +29,4 @@
    */
   @db(timedValueHistoryField='gridStatusSet')
   gridStatus: PowerGridStatus
- }
+}

@@ -7,8 +7,22 @@
 * This product may be covered by one or more U.S. patents or pending patent applications.
 ~*/
 
-/** 
- * An company that manufacturers lightbulbs. 
+/**
+ * This type represents the raw data that will represent {@link PowerGridStatus} information.
  */
+type CanonicalPowerGridStatus mixes Canonical<CanonicalPowerGridStatus> {
+  /**
+   * This represents the datetime to use for the start of {@link PowerGridStatus}
+   */
+  TS:       datetime
 
-entity type Manufacturer mixes MetricEvaluatable schema name "MNFCT"
+  /**
+   * This represents the id of the {@link Building}
+   */
+  Building: string
+
+  /**
+   *  This represents the status ON or OFF (1 or 0) for the power grid of a {@Building}
+   */
+  Status:   int
+}

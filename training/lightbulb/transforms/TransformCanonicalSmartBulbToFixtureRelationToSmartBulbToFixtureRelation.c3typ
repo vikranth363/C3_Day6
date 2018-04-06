@@ -7,8 +7,13 @@
 * This product may be covered by one or more U.S. patents or pending patent applications.
 ~*/
 
-/** 
- * An company that manufacturers lightbulbs. 
+/**
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulbToFixtureRelation} to the {@link SmartBulbToFixtureRelation} type.
  */
-
-entity type Manufacturer mixes MetricEvaluatable schema name "MNFCT"
+type TransformCanonicalSmartBulbToFixtureRelationToSmartBulbToFixtureRelation mixes SmartBulbToFixtureRelation transforms CanonicalSmartBulbToFixtureRelation {
+  id:      ~ expression "concat(SN,'_',fixture)"
+  to:      ~ expression { id: "fixture" }
+  from:    ~ expression { id: "SN" }
+  end:     ~ expression "end"
+  start:   ~ expression "start"
+}

@@ -7,11 +7,9 @@
 * This product may be covered by one or more U.S. patents or pending patent applications.
 ~*/
 
-
 /**
  * The status of the power grid for a {@link Building}  at a specific time.
  */
-
 @db(datastore='cassandra', 
   partitionKeyField='parent',
   persistenceOrder='timestamp',

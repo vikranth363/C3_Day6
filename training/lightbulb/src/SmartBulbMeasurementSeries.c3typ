@@ -10,13 +10,7 @@
 /**
  * A series of measurements taken from a single {@link SmartBulb}.
  */
- @db(datastore='cassandra',
-    partitionKeyField='parent',
-    persistenceOrder='start',
-    persistDuplicates=false,
-    compactType=true,
-    shortIdReservationRange=100000)
- extendable entity type SmartBulbMeasurementSeries mixes TimeseriesHeader<SmartBulbMeasurement> schema name "SMRT_BLB_MSRMNT_SRS" {
+extendable entity type SmartBulbMeasurementSeries mixes TimeseriesHeader<SmartBulbMeasurement> schema name "SMRT_BLB_MSRMNT_SRS" {
 
   /**
    * The {@link SmartBulb} for which measurements were taken.
@@ -26,6 +20,5 @@
   /**
    * The aggregation/disaggregation {@link Treatment} to use for the measurements.
    */
-   treatment: string enum('previous', 'rate', 'integral')
-
- }
+  treatment: string enum('previous', 'rate', 'integral')
+} 

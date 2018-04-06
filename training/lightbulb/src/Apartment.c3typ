@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 * Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
 * This material, including without limitation any software, is the confidential trade secret
@@ -12,17 +11,14 @@
  * A single apartment unit in a {@link Building}.
  */
 
- entity type Apartment mixes MetricEvaluatable schema name "APRTMNT" {
+entity type Apartment mixes MetricEvaluatable schema name "APRTMNT" {
   /**
    * The {@link Building} in which this apartment is located.
    */
-   building: Building
+  building: Building
 
   /**
    * An array of fixtures that exist in this apartment.
    */
-   fixture: [Fixture](apartment)
- }
-=======
- entity type Apartment schema name "APRTMNT"
->>>>>>> 39a74f7ae5921772cf96ed94833c2bec5e68a532
+  fixture: [Fixture](apartment)
+}
