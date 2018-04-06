@@ -1,0 +1,11 @@
+type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurement mixes SmartBulbMeasurement transforms CanonicalSmartBulbMeasurement {
+
+    lumens:  ~ expression "Lumens"
+    power:   ~ expression "Watts"
+    temperature: ~ expression "Temp"
+    voltage:    ~ expression "Voltage"
+    status:     ~ expression "Status"
+    parent:     ~ expression {id= "concat('SBMS_serialNo_',SN)"}
+    start:      ~ expression "TS"
+    end:        ~ expression "TS+period(1,'HOUR')"
+}
