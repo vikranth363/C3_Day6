@@ -8,6 +8,7 @@
 ~*/
 
 /**
+<<<<<<< HEAD
  * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
  */
 type TransformCanonicalSmartBulbToSmartBulbEvent mixes SmartBulbEvent transforms CanonicalSmartBulbEvent {
@@ -19,4 +20,15 @@ type TransformCanonicalSmartBulbToSmartBulbEvent mixes SmartBulbEvent transforms
   start:        ~ expression "start"
   end:          ~ expression "end"
 
+=======
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulbEvent} to the {@link SmartBulbEvent} type.
+ */
+type TransformCanonicalSmartBulbEventToSmartBulbEvent mixes SmartBulbEvent transforms CanonicalSmartBulbEvent {
+  id:        ~ expression "id"
+  end:       ~ expression "end"
+  start:     ~ expression "start"
+  eventCode: ~ expression "eventCode"
+  eventType: ~ expression "eventType"
+  smartBulb: ~ expression { id: "bulb" }
+>>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
 }

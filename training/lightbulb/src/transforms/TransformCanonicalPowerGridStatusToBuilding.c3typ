@@ -7,9 +7,18 @@
 * This product may be covered by one or more U.S. patents or pending patent applications.
 ~*/
 
+<<<<<<< HEAD
 type TransformCanonicalPowerGridStatusToBuilding mixes Building transforms CanonicalPowerGridStatus {
 
   id:           ~ expression "Building"
   gridStatus:    ~ expression {timestamp: "TS", value: "Status"}
 
+=======
+/**
+ * This type encapsulates the data flow from the {@link CanonicalPowerGridStatus} to the {@link PowerGridStatusSet} type.
+ */
+type TransformCanonicalPowerGridStatusToBuilding mixes Building transforms CanonicalPowerGridStatus {
+  id:			~ expression "Building"
+  gridStatus:	~ expression { timestamp: "TS", value: "Status"}
+>>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
 }

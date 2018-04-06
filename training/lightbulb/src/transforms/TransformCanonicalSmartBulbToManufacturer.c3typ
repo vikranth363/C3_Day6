@@ -8,15 +8,10 @@
 ~*/
 
 /**
- * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulb} to the {@link Manufacturer} type.
  */
-type TransformCanonicalFixtureToApartment mixes Apartment transforms CanonicalFixture {
+type TransformCanonicalSmartBulbToManufacturer mixes Manufacturer transforms CanonicalSmartBulb {
 
-  id:       ~ expression "apartment"
-<<<<<<< HEAD
-  building: ~ expression {id: "building"}
-=======
-  building: ~ expression { id: "building" }
->>>>>>> 2b448fc1b133c550e936c1e4a72cab07aba5ca8a
+  id:              ~ expression "Manufacturer"
 
 }

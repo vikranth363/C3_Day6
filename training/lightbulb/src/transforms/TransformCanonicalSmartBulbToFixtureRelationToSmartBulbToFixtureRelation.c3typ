@@ -8,13 +8,12 @@
 ~*/
 
 /**
- * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulbToFixtureRelation} to the {@link SmartBulbToFixtureRelation} type.
  */
-type TransformCanonicalSmartBulbFixtureToSmartBulbToFixtureRelation mixes SmartBulbToFixtureRelation transforms CanonicalSmartBulbFixture {
-
-  id:           ~ expression "concat(SN, fixture, start)"
-  from:         ~ expression {id: "SN"}
-  to:           ~ expression {id: "fixture"}
-  start:        ~ expression "start"
-  end:          ~ expression "end"
+type TransformCanonicalSmartBulbToFixtureRelationToSmartBulbToFixtureRelation mixes SmartBulbToFixtureRelation transforms CanonicalSmartBulbToFixtureRelation {
+  id:      ~ expression "concat(SN,'_',fixture)"
+  to:      ~ expression { id: "fixture" }
+  from:    ~ expression { id: "SN" }
+  end:     ~ expression "end"
+  start:   ~ expression "start"
 }

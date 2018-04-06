@@ -63,4 +63,8 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    */
   currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
 
+  /**
+   * A function that returns the life span in years of .
+   */
+  lifeSpanInYears: function(bulbId: string): double js server 
 }
