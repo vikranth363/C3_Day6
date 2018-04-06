@@ -10,9 +10,18 @@
 /**
  * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
  */
-type TransformCanonicalFixtureToApartment mixes Apartment transforms CanonicalFixture {
+type TransformCanonicalSmartBulbToSmartBulb mixes SmartBulb transforms CanonicalSmartBulb {
 
-  id:       ~ expression "apartment"
-  building: ~ expression {id: "building"}
+  id:           ~ expression "SN"
+  manufacturer: ~ expression {id: "Manufacturer"}
+  bulbType:     ~ expression "BulbType"
+  wattage:      ~ expression "Wattage"
+  startDate:    ~ expression "StartDate"
+  latitude:     ~ expression "Latitude"
+  longitude:    ~ expression "Longitude"
+  lumensUOM:    ~ expression {id: "lumen"}
+  powerUOM:     ~ expression {id: "watt"}
+  temperatureUOM: ~ expression {id: "degrees_fahrenheit"}
+  voltageUOM:    ~ expression {id: "volt"}
 
 }

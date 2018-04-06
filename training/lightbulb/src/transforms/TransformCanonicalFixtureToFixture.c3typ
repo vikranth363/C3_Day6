@@ -7,12 +7,9 @@
 * This product may be covered by one or more U.S. patents or pending patent applications.
 ~*/
 
-/**
- * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
- */
-type TransformCanonicalFixtureToApartment mixes Apartment transforms CanonicalFixture {
+type TransformCanonicalFixtureToFixture mixes Fixture transforms CanonicalFixture {
 
-  id:       ~ expression "apartment"
-  building: ~ expression {id: "building"}
+  id:           ~ expression "fixture"
+  apartment: ~ expression {id: "apartment"}
 
 }
