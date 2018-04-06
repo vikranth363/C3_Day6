@@ -1,6 +1,6 @@
 {
     "id" :          "Status_SmartBulb",
-    "name":         "Status",
+    "name":         "Status_SmartBulb",
     "srcType":      "SmartBulb",
     "path":         "bulbMeasurements",
     "expression":   "max(max(normalized.data.status))",

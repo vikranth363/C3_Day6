@@ -1,8 +1,12 @@
 {
     "id" :          "Status_Building",
-    "name":         "Status",
+    "name":         "Status_Building",
     "srcType":      "Building",
-    "path":         "gridStatusSet",
-    "expression":   "max(max(normalized.data.value))",
-    "description":  "Status (0 or 1) indicating On/Off of the SmartcBulb over time"
+    "tsDecl":{
+        "data":"gridStatusSet",
+        "start":"timestamp",
+        "treatment": "PREVIOUS",
+        "value": "value"
+    },
+    "description":  "Status (0 or 1) indicating On/Off of the Building over time"
 }
