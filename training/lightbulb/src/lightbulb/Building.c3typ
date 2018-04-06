@@ -23,10 +23,9 @@ entity type Building mixes MetricEvaluatable schema name "BLDNG" {
   @db(order='descending(timestamp)')
   gridStatusSet: [PowerGridStatusSet](parent)
 
-  /**
-   * Latest status of this building's power grid.
-   */
-  @db(timedValueHistoryField='gridStatusSet')
-  gridStatus: PowerGridStatus
+  
+
+  @db(timedValueHistoryField='powerGridStatusHistory')
+	currentPowerGridStatus:	PowerGridStatus
 
 }
