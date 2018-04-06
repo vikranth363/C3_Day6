@@ -3,8 +3,8 @@
     "name":"Voltage",
     "srcType":"SmartBulb",
     "path":"bulbMeasurements",
-    "expression":"sum(avg(normalized.data.voltage))",
+    "expression":"avg(avg(normalized.data.voltage))",
     "description":" Power of the SmartBulb",
-    "unit":{"id":"volts"}
+    "unit":{"id":"mV"}
 
 }

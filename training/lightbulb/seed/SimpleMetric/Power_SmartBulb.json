@@ -3,8 +3,8 @@
     "name":"Power",
     "srcType":"SmartBulb",
     "path":"bulbMeasurements",
-    "expression":"sum(sum(normalized.data.power))",
+    "expression":"avg(avg(normalized.data.power))",
     "description":" Power of the SmartBulb",
-    "unit":{"id":"watts"}
+    "unit":{"id":"kilowatt"}
 
 }

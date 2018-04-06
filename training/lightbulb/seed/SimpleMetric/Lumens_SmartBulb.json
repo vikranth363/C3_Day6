@@ -3,8 +3,8 @@
     "name":"Lumens",
     "srcType":"SmartBulb",
     "path":"bulbMeasurements",
-    "expression":"sum(avg(normalized.data.lumens))",
+    "expression":"avg(avg(normalized.data.lumens))",
     "description":" Power of the SmartBulb",
-    "unit":{"id":"lumens"}
+    "unit":{"id":"lumen"}
 
 }
