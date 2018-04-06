@@ -1,5 +1,7 @@
 type TransformCanonicalPowerGridStatusToPowerGridStatusSet mixes PowerGridStatusSet transforms CanonicalPowerGridStatus {
 
+    id:         ~
+
     parent:     ~ expression "Building"
 
     timestamp:  ~ expression "TS"

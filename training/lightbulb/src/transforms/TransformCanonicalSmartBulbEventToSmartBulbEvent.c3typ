@@ -1,5 +1,7 @@
 type TransformCanonicalSmartBulbEventToSmartBulbEvent mixes SmartBulbEvent transforms CanonicalSmartBulbEve {
 
+  id:         ~ expression "id"
+  
   end:        ~ expression "end"
 
   start:      ~ expression "start"
