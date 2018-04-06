@@ -4,7 +4,7 @@
     "srcType":      "SmartBulb",
     "path":         "bulbMeasurements",
     "expression":   "avg(avg(normalized.data.voltage))",
-    "description":  " Power of the SmartBulb",
+    "description":  "Power of the SmartBulb",
     "unit":         {"id": "mV"}
 
 }

@@ -1,14 +1,14 @@
 {
-    "id" : "ConnectivityEvent_SmartBulb",
-    "name":"ConnectivityEvent",
-    "srcType":"SmartBulb",
-    "description":"Returns a 1 if an connectivity event occured, or a 0 if not",
+    "id" :          "ConnectivityEvent_SmartBulb",
+    "name":         "ConnectivityEvent",
+    "srcType":      "SmartBulb",
+    "description":  "Returns a 1 if an connectivity event occured, or a 0 if not",
     "tsDecl":{
-        "data":"bulbEvents",
-        "start":"start",
-        "end":"end",
-        "treatment":"OR",
-        "value":"enventType=='Connectivity'"
+        "data":         "bulbEvents",
+        "start":        "start",
+        "end":          "end",
+        "treatment":    "OR",
+        "value":        "enventType=='Connectivity'"
     }
 
 }
