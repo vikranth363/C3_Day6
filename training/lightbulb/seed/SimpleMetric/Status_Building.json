@@ -3,6 +3,6 @@
     "name":         "Status",
     "srcType":      "Building",
     "path":         "gridStatusSet",
-    "expression":   "avg(avg(normalized.data.value))",
+    "expression":   "max(max(normalized.data.value))",
     "description":  "Status (0 or 1) indicating On/Off of the SmartcBulb over time"
 }
