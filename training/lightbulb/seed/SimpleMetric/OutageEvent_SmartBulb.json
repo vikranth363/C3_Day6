@@ -8,7 +8,7 @@
         "start":    "start",
         "end":      "end",
         "treatment":"OR",
-        "value":    "enventType=='Outage'"
+        "value":    "eventType=='Outage'"
     }
 
 }
