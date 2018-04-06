@@ -1,9 +1,8 @@
 {
-    "id" : "Status_SmartBulb",
-    "name":"Status",
-    "srcType":"SmartBulb",
-    "path":"bulbMeasurements",
-    "expression":"max(max(normalized.data.status))",
-    "description":"Status (0 or 1) indicating On/Off of the SmartcBulb over time"
-
+    "id" :          "Status_SmartBulb",
+    "name":         "Status",
+    "srcType":      "SmartBulb",
+    "path":         "bulbMeasurements",
+    "expression":   "avg(avg(normalized.data.status))",
+    "description":  "Status (0 or 1) indicating On/Off of the SmartcBulb over time"
 }

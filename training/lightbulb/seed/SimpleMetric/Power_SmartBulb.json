@@ -1,10 +1,10 @@
 {
-    "id" : "Power_SmartBulb",
-    "name":"Power",
-    "srcType":"SmartBulb",
-    "path":"bulbMeasurements",
-    "expression":"sum(sum(normalized.data.power))",
-    "description":" Power of the SmartBulb",
-    "unit":{"id":"watts"}
+    "id" :          "Power_SmartBulb",
+    "name":         "Power",
+    "srcType":      "SmartBulb",
+    "path":         "bulbMeasurements",
+    "expression":   "avg(avg(normalized.data.power))",
+    "description":  " Power of the SmartBulb",
+    "unit":         {"id":"watts"}
 
 }
