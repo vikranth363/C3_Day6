@@ -1,0 +1,10 @@
+{
+    "id" : "Voltage_SmartBulb",
+    "name":"Voltage",
+    "srcType":"SmartBulb",
+    "path":"bulbMeasurements",
+    "expression":"sum(avg(normalized.data.voltage))",
+    "description":" Power of the SmartBulb",
+    "unit":{"id":"volts"}
+
+}

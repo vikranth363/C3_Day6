@@ -1,0 +1,10 @@
+{
+    "id" : "Temperature_SmartBulb",
+    "name":"Temperature",
+    "srcType":"SmartBulb",
+    "path":"bulbMeasurements",
+    "expression":"sum(sum(normalized.data.temperature))",
+    "description":" Temperature of the SmartBulb",
+    "unit":{"id":""}
+
+}

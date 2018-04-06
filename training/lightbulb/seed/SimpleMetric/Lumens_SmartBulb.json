@@ -1,0 +1,10 @@
+{
+    "id" : "Lumens_SmartBulb",
+    "name":"Lumens",
+    "srcType":"SmartBulb",
+    "path":"bulbMeasurements",
+    "expression":"sum(avg(normalized.data.lumens))",
+    "description":" Power of the SmartBulb",
+    "unit":{"id":"lumens"}
+
+}
