@@ -11,8 +11,12 @@
  * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
  */
 type TransformCanonicalFixtureToApartment mixes Apartment transforms CanonicalFixture {
+// ~ means we defined the id field as string before when making apartment type
+// building: since canonical is taking building as string,
+//we are saying to put that string as the id of the building
+// type - can't convert a string to an object type
 
   id:       ~ expression "apartment"
-  building: ~ expression { id: "building" }
+  building: ~ expression { id: "building" } // make the id field of the object the building column from the canonical
 
 }

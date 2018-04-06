@@ -1,0 +1,7 @@
+type TransformCanonicalSmartBulbToFixtureRelation mixes SmartBulbToFixtureRelation transforms CanonicalSmartBulbToFixtureRelation {
+  id:      ~ expression "concat(SN,'_',fixture)"
+  to:      ~ expression { id: "fixture" }
+  from:    ~ expression { id: "SN" }
+  end:     ~ expression "end"
+  start:   ~ expression "start"
+}

@@ -1,0 +1,5 @@
+type TransformCanonicalSmartBulbToManufacturer mixes Manufacturer transforms CanonicalSmartBulb {
+
+  id:			~ expression "Manufacturer"
+
+}
