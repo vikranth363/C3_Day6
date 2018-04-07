@@ -1,0 +1,8 @@
+{
+    "id": "SumAvgLumens_SmartBulb",
+    "name": "SumAverageLumens",
+    "description": "Total lumens average on single smartbulb",
+    "srcType":"SmartBulb",
+    "path": "bulbMeasurements",
+    "expression": "sum(avg(normalized.data.lumens))"
+}

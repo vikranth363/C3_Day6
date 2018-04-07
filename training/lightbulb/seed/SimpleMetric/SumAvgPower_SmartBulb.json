@@ -1,0 +1,8 @@
+{
+    "id": "SumAvgPower_SmartBulb",
+    "name": "SumAveragePower",
+    "description": "Total power average on single smartbulb",
+    "srcType":"SmartBulb",
+    "path": "bulbMeasurements",
+    "expression": "sum(avg(normalized.data.power))"
+}
