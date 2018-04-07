@@ -1,6 +1,0 @@
-{
-    "name": "SmartBulbOutageOn",
-    "id": "SmartBulbOutageOn",
-    "description": "The smartbulb and the outage was on",
-    "expression": "Status_SmartBulb == 1 && Outage == 1"
-}

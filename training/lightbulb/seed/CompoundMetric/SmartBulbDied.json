@@ -1,6 +1,0 @@
-{
-    "name": "SmartBulbDied",
-    "id": "SmartBulbDied",
-    "description": "Indicate if the smartbulb died or not",
-    "expression": "Lumens == 0 && Status_Building == 1 && Status_SmartBulb == 1"
-}

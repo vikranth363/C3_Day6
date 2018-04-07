@@ -1,6 +1,0 @@
-{
-    "name": "CountSwitchOn",
-    "id": "CountSwitchOn",
-    "description": "calculates the total number of times a lightbulb is switched on or off in the previous week of the interval",
-    "expression": "rolling('SUM',sum(eval('HOUR', Status_SmartBulb)))"
-}
