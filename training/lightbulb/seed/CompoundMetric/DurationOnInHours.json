@@ -1,6 +1,6 @@
 {
   "id": "DurationOnInHours",
   "name": "DurationOnInHours",
-  "description": "  ",
+  "description": "Calculates how long a SmartBulb has been on, given the user timeframe  ",
   "expression": "rolling('SUM', sum(eval('HOUR', Status)))"
 }
