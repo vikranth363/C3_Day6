@@ -7,6 +7,17 @@
 * This product may be covered by one or more U.S. patents or pending patent applications.
 ~*/
 
+/*
+ * Returns the expected lumens of a light bulb based on wattage and bulbType
+ */
+function expectedLumens(wattage, bulbType) {
+  if(bulbType == 'LED')
+    return wattage * 84;
+  if(bulbType == 'INCAN')
+    return wattage * 14;
+  if(bulbType == 'CFL')
+    return wattage * 62;
+}
 
 /*
  * Returns the lifespan of a smart bulb in years.
@@ -22,4 +33,28 @@ function lifeSpanInYears(bulbId){
   conversionFactor = 1000*60*60*24*365;
   lifeSpanInYears = lifespan / conversionFactor;
   return lifeSpanInYears;
+}
+
+/*
+ * Returns the shorted bulb Id
+ */
+function shortestLifeSpanBulb() {
+    var shortestLife, shortestBulbID;
+    
+    var smartBulbArray = SmartBulb.fetch().objs;
+    if (!smartBulbArray) {
+      return 0;
+    }
+
+    shortestLife = lifeSpanInYears(smartBulbArray[0].id);
+    shortestBulbID = smartBulbArray[0].id;
+
+    for (var i = 1; i < smartBulbArray.length; i++) {
+      if (lifeSpanInYears(smartBulbArray[i].id) < shortestLife) {
+        shortestLife = lifeSpanInYears(smartBulbArray[i].id);
+        shortestBulbID = smartBulbArray[i].id;
+      } 
+    }
+
+    return shortestBulbID;
 }
