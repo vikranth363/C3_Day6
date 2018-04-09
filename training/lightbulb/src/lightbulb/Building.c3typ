@@ -29,4 +29,9 @@ entity type Building mixes MetricEvaluatable schema name "BLDNG" {
   @db(timedValueHistoryField='gridStatusSet')
   gridStatus: PowerGridStatus
 
+  /**
+  * A function that returns the average temperature of a building.
+  */
+  averageTemperature: function(): double js server
+
 }
