@@ -1,0 +1,12 @@
+{
+  "id": "PowerGridOutage",
+  "name": "PowerGridOutage",
+  "description": "Indication if the SmartBulb is not illuminated and the PowerGrid is off",
+  "srcType": "SmartBulb",
+  "tsDecl": {
+      "data": "SmartBulbMeasurement",
+      "start": "timestamp",
+      "treatment": "OR",
+      "value": "status == 0 && powerGridStatus.value = 0"
+  }
+}

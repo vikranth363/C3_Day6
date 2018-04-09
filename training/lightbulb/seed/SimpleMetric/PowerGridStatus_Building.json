@@ -6,7 +6,7 @@
   "tsDecl": {
       "data": "gridStatusSet",
       "start": "timestamp",
-      "treatment": "OR",
+      "treatment": "PREVIOUS",
       "value": "value == 1"
   }
 }

@@ -1,0 +1,6 @@
+{
+  "id": "SmartBulbDied",
+  "name": "SmartBulbDied",
+  "description": "Indication if the SmartBulb is not illuminated but the PowerGrid is on",
+  "expression": "rolling('SUM', sum(eval('HOUR', Status == 1 && powerGridStatus == 1 && AverageLumens == 0)))"
+}
