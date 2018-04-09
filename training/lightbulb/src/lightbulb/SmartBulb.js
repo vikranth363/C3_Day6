@@ -46,10 +46,14 @@ function shortestLifeSpanBulb() {
     // Get the lifespan of the current smartbul
     var liveSpanBulb = SmartBulb.lifeSpanInYears(smartbulb.id);
 
-    // Compare and set the new livespan
-    if(liveSpanBulb < shortestLiveSpanBulb){
-      result = smartbulb.id;
-    }
+    if(liveSpanBulb){
+
+      // Compare and set the new livespan
+      if(liveSpanBulb < shortestLiveSpanBulb){
+        result = smartbulb.id;
+      }
+
+    } 
     
   });
 
