@@ -29,7 +29,6 @@ function lifeSpanInYears(bulbId){
     }
     
   }
-
   lifespan = defectTime - startTime;
   lifeSpanInYears = lifespan / conversionFactor;
   return lifeSpanInYears;
@@ -60,6 +59,69 @@ function shortestLifeSpanBulb() {
     
     // ... compare and ...
     if (liveSpanBulb < shortestLiveSpanBulb) {
+
+      // ... shortest livespan ...
+      shortestLiveSpanBulb = liveSpanBulb;
+
+      // ... set id of the new shortest livespan.
+      result = smartbulb.id;
+    }
+    
+  });
+
+  return result;
+
+}
+
+function averageLifeTimeBulb() {
+
+  // Get all smartbulbs.
+  var allSmartBulbs = SmartBulb.fetch();
+
+  if(allSmartBulbs.objs.length == 0) {
+     return 0;
+  }
+
+  // Initialize the shortest lifespan.
+  var result = SmartBulb.lifeSpanInYears(id);
+
+  // foreach smartbulb ...
+  allSmartBulbs.objs.each(function(smartbulb) {
+
+    // ... get the lifespan of the current smartbulb ...
+    result += SmartBulb.lifeSpanInYears(smartbulb.id);
+    
+  });
+
+  return result/allSmartBulbs.objs.length;
+
+}
+
+function longestLifeSpanBulb() {
+
+  // Get all smartbulbs.
+  var allSmartBulbs = SmartBulb.fetch();
+
+  if(allSmartBulbs.objs.length == 0) {
+     return -1;
+  }
+
+  // Initialize the shortest lifespan.
+  var id = allSmartBulbs.objs[0].id;
+
+  var shortestLiveSpanBulb = SmartBulb.lifeSpanInYears(id);
+  
+  // Intialize the id of the bulb with the shortest lifespan.
+  var result = id;
+
+  // foreach smartbulb ...
+  allSmartBulbs.objs.each(function(smartbulb) {
+
+    // ... get the lifespan of the current smartbulb ...
+    var liveSpanBulb = SmartBulb.lifeSpanInYears(smartbulb.id);
+    
+    // ... compare and ...
+    if (liveSpanBulb > shortestLiveSpanBulb) {
 
       // ... shortest livespan ...
       shortestLiveSpanBulb = liveSpanBulb;
