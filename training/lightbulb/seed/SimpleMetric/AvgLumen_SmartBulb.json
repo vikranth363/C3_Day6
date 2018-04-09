@@ -1,6 +1,6 @@
 {
-    "id": "ZeroLumen_SmartBulb",
-    "name": "ZeroLumen",
+    "id": "AvgLumen_SmartBulb",
+    "name": "AvgLumen",
     "description": "Avg lumen",
     "srcType":"SmartBulb",
     "path" : "bulbMeasurements",
