@@ -23,3 +23,35 @@ function lifeSpanInYears(bulbId){
   lifeSpanInYears = lifespan / conversionFactor;
   return lifeSpanInYears;
 }
+
+function shortestLifeSpanBulb() {
+
+  // Get all smartbulbs
+  var allSmartBulbs = SmartBulb.fetch();
+
+  if(allSmartBulbs.objs.length == 0) {
+     return -1;
+  }
+
+  // Initialize the shortest lifespan
+  var id = allSmartBulbs.objs[0].id;
+
+  var shortestLiveSpanBulb = SmartBulb.lifeSpanInYears(id);
+  
+  var result = id;
+
+  // foreach smartbulb ...
+  allSmartBulbs.objs.each(function(smartbulb){
+
+    // Get the lifespan of the current smartbul
+    var liveSpanBulb = SmartBulb.lifeSpanInYears(smartbulb.id);
+
+    // Compare and set the new livespan
+    if(liveSpanBulb < shortestLiveSpanBulb){
+      result = smartbulb.id;
+    }
+    
+  });
+
+  return result;
+}
