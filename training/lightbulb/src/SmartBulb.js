@@ -43,15 +43,16 @@ function shortestLifeSpanBulb() {
     
     var smartBulbArray = SmartBulb.fetch().objs;
     if (!smartBulbArray) {
-      return 0;
+      return "Error";
     }
 
     shortestLife = lifeSpanInYears(smartBulbArray[0].id);
     shortestBulbID = smartBulbArray[0].id;
 
     for (var i = 1; i < smartBulbArray.length; i++) {
-      if (lifeSpanInYears(smartBulbArray[i].id) < shortestLife) {
-        shortestLife = lifeSpanInYears(smartBulbArray[i].id);
+      let span = lifeSpanInYears(smartBulbArray[i].id);
+      if (span < shortestLife) {
+        shortestLife = span;
         shortestBulbID = smartBulbArray[i].id;
       } 
     }
