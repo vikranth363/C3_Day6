@@ -53,6 +53,17 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    */
   voltageUOM: Unit
 
+   /**
+   * A SmartBulb is associated to a {@link Fixture} through a SmartBulbToFixtureRelation.
+   */
+  @db(order='descending(start), descending(end)')
+  fixtureHistory: [SmartBulbToFixtureRelation](from)
+
+  /**
+   * The current Fixture to which this bulb is attached.
+   */
+  currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
+
   /*
     * Returns the lifespan of a smart bulb in years.
     */
