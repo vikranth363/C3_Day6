@@ -1,0 +1,6 @@
+{
+    "id": "indicatorMetric",
+    "name": "IndicatorMetric",
+    "expression": "and(StatusPG, ZeroLumen,Status)"
+  }
+  

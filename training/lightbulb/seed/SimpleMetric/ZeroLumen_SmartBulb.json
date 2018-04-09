@@ -1,8 +1,13 @@
 {
     "id": "ZeroLumen_SmartBulb",
     "name": "ZeroLumen",
-    "description": "Status (1 or 0) indicating ON or OFF of the SmartBulb over time",
-    "srcType":"SmartBulb",
-    "path" : "bulbMeasurements",
-    "expression" : "avg(avg(normalized.data.lumens))"
+    "srcType": "SmartBulb", 
+    "description": "Returns a 1 if an lumen is zero",
+    "tsDecl": {
+                 "data": "SmartBulbMeasurement",
+                 "start": "start",
+                 "end": "end",
+                 "treatment": "OR",
+                 "value": "lumens==0"
+               }
 }
