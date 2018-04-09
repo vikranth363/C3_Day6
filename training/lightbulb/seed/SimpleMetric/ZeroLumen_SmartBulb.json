@@ -4,7 +4,7 @@
     "srcType": "SmartBulb", 
     "description": "Returns a 1 if an lumen is zero",
     "tsDecl": {
-                 "data": "bulbMeasurements",
+                 "data": "bulbEvents",
                  "start": "start",
                  "end": "end",
                  "treatment": "OR",
