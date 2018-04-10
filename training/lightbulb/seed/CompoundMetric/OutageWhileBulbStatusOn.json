@@ -1,0 +1,6 @@
+{
+    "id":           "OutageWhileBulbStatusOn",
+    "name":         "OutageWhileBulbStatusOn",
+    "description":  "",
+    "expression":   "eval('HOUR',Lumens != 0 && PowerGridStatus == 0)"
+}
