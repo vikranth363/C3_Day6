@@ -1,4 +1,4 @@
-var log = C3.logger("SmartBulbDefective");
+var log = C3.logger("SmartBulbDefectiveAlert");
 
 function process(input){
 
