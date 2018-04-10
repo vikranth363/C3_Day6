@@ -2,5 +2,6 @@
     "name": "SmartBulbOnDuringOutage",
     "id": "SmartBulbOnDuringOutage",
     "description": "Indicates 1 when there is an outage and the smart bulb is ON",
-    "expression": "AverageLumens != 0 && PowerGridStatus == 0"
+    "expression": "or(eval('HOUR',AverageLumens != 0 && PowerGridStatus == 0))"
+    
 }

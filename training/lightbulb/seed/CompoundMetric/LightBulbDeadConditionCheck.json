@@ -1,0 +1,6 @@
+{
+"id":"LightBulbDeadConditionCheck",
+"name":"LightBulbDeadConditionCheck",
+"expression":"or(eval('HOUR',AverageLumens==0 && PowerGridStatus ==1 && Status ==1))?1:0"
+
+}
