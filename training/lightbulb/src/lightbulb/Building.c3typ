@@ -32,6 +32,6 @@ entity type Building mixes MetricEvaluatable schema name "BLDNG" {
   /**
   * A function that returns the average temperature of a building.
   */
-  averageTemperature: function(): double js server
+  averageTemperature: function(buildingId: string): double js server
 
 }
