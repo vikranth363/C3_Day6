@@ -53,6 +53,18 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    */
   voltageUOM: Unit
 
+  /**
+   * This smartbuls's overheat status history in a descending order.
+   */
+  @db(order='descending(timestamp)')
+  overheatStatusSet: [SmartBulbOverheatStatusSet](parent)
+
+  /**
+   * Latest status of this bulb's overheat Status
+   */
+  @db(timedValueHistoryField='overheatStatusSet')
+  overheatStatus: SmartBulbOverheatStatus
+
   /*
     * Returns the lifespan of a smart bulb in years.
     */

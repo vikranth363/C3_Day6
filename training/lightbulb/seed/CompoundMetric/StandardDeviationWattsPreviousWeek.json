@@ -1,0 +1,5 @@
+{
+    "name": "StandardDeviationWattsPreviousWeek",
+    "id": "StandardDeviationWattsPreviousWeek",
+    "expression": "window('STDDEV', AveragePower, -7, 7)"
+}
