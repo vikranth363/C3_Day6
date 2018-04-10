@@ -1,4 +1,4 @@
-var log = C3.logger("SmartBulbLongLIfeAlert");
+var log = C3.logger("SmartBulbLongLifeAlert");
 
 var DURATION_THRESHOLD = 10500;
 
@@ -11,7 +11,7 @@ function process(input) {
         smartBulb: input.source,
         eventCode: "LONGLIFE",
         start: dates.at(i),
-        end: dates.at(i+i)
+        end: dates.at(i + 1)
       });
     }
   }
