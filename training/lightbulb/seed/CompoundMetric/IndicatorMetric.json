@@ -1,6 +1,6 @@
 {
     "id": "indicatorMetric",
     "name": "IndicatorMetric",
-    "expression": "sum(eval('HOUR',ZeroLumen == 0 && Status == 1 && StatusPG == 0)) ? 1 : 0"
+    "expression": "or(eval('HOUR',ZeroLumen == 0 && Status == 1 && StatusPG == 0)) ? 1 : 0"
   }
   

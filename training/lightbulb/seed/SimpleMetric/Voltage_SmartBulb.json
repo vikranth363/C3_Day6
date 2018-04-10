@@ -4,5 +4,5 @@
     "srcType":"SmartBulb",
     "path":"bulbMeasurements",
     "expression":"sum(avg(normalized.data.voltage))",
-    "description":" Power of the SmartBulb"
+    "description":" Voltage of the SmartBulb"
 }

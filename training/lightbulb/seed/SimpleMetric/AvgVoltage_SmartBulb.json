@@ -1,0 +1,8 @@
+{
+    "id" : "AvgVoltage_SmartBulb",
+    "name":"AvgVoltage",
+    "srcType":"SmartBulb",
+    "path":"bulbMeasurements",
+    "expression":"avg(avg(normalized.data.voltage))",
+    "description":" Avg voltage of the SmartBulb"
+}

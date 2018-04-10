@@ -35,6 +35,10 @@ function lifeSpanInYears(bulbId){
   return lifeSpanInYears;
 }
 
+/*
+*
+*/
+
 function shortestLifeSpanBulb(){
   var bulb;
   bulb = SmartBulb.fetch();
@@ -58,6 +62,10 @@ function shortestLifeSpanBulb(){
   }
 }
 
+/*
+*
+*/
+
 
 function avgLifeSpanBulb(){
   var bulb;
@@ -75,6 +83,10 @@ function avgLifeSpanBulb(){
  res = app/bulb.count;
  return res;
 }
+
+/*
+*
+*/
 
 function longLifeSpanBulb(){
   var bulb;
@@ -99,6 +111,10 @@ function longLifeSpanBulb(){
   }
 }
 
+/*
+*
+*/
+
 function tempBulb(bulbId){
   var bulb, startTime, defectFilter, defectDatum, defectTime, lifespan, conversionFactor, lifeSpanInYears;
   bulb = SmartBulb.get({id:bulbId});
@@ -119,6 +135,10 @@ function tempBulb(bulbId){
   return temp;
   
 }
+
+/*
+*
+*/
 
 function mediumTempBuild(buildId)
 {

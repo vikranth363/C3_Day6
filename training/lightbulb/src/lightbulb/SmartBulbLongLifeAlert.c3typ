@@ -1,0 +1,4 @@
+type SmartBulbLongLifeAlert mixes Analytic<SmartBulbLongLifeInput, SmartBulbEvent> 
+{
+    process : ~ jsserver
+}

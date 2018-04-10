@@ -8,6 +8,7 @@
                  "start": "start",
                  "end": "end",
                  "treatment": "OR",
-                 "value": "eventType== 'Outage'"
+                 "value": "eventType== 'Outage'",
+                 "transform":"fillMissing('this',0)"
                }
 }

@@ -1,0 +1,7 @@
+{
+    "id" : "NamePlateWattage_SmartBulb",
+    "name":"NamePlateWattage",
+    "srcType":"SmartBulb",
+    "expression":"sum(identity(wattage))",
+    "description":" nameplate wattage of the smartbulb"
+}
