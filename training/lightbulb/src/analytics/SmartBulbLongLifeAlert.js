@@ -1,5 +1,4 @@
 var log = C3.logger("SmartBulbLongLifeAlert");
-
 var DURATION_THRESHOLD = 400
 
 function process(input) {
