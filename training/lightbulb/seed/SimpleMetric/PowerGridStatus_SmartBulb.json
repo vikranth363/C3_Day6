@@ -1,0 +1,14 @@
+{
+    "id" : "PowerGridStatus_SmartBulb",
+    "name":"PowerGridStatus",
+    "srcType":"SmartBulb",
+    "description":"",
+    "path":"fixtureHistory.to.apartment.building",
+    "tsDecl":{
+        "data":"gridStatusSet",
+        "start":"timestamp",
+        "treatment":"Previous",
+        "value":"value"
+    }
+
+}
