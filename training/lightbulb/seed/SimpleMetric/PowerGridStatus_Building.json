@@ -1,0 +1,12 @@
+{
+  "id": "PowerGridStatus_Building",
+  "name": "PowerGridStatus",
+  "description": "Status indicating on/off status of power grid",
+  "srcType" : "Building",
+  "tsDecl": {
+    "data": "gridStatusSet",
+    "value": "value",
+    "treatment": "PREVIOUS",
+    "start": "timestamp"
+  }
+}

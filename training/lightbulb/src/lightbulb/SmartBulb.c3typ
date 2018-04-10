@@ -62,9 +62,20 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    * The current Fixture to which this bulb is attached.
    */
   currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
+  
+    /**
+   * A function that returns the expected Lumens of given bulb .
+   */
+  expectedLumens: function(wattage: decimal, bulbType: string): double js server 
 
   /**
-   * A function that returns the life span in years of .
+   * A function that returns the life span in years of given bulb .
    */
   lifeSpanInYears: function(bulbId: string): double js server 
+  
+    /**
+   * A function that returns the shortest Life Span of a Bulb.
+   */
+  shortestLifeSpanBulb: function(): string js server
+
 }
