@@ -50,7 +50,7 @@ function shortestLifeSpanBulb() {
     shortestBulbID = smartBulbArray[0].id;
 
     for (var i = 1; i < smartBulbArray.length; i++) {
-      let span = lifeSpanInYears(smartBulbArray[i].id);
+      span = lifeSpanInYears(smartBulbArray[i].id);
       if (span < shortestLife) {
         shortestLife = span;
         shortestBulbID = smartBulbArray[i].id;
