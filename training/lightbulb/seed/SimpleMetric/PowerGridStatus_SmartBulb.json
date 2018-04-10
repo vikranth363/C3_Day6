@@ -7,8 +7,7 @@
     "tsDecl":{
         "data":"gridStatusSet",
         "start":"timestamp",
-        "treatment":"Previous",
+        "treatment":"PREVIOUS",
         "value":"value"
     }
-
 }
