@@ -1,0 +1,6 @@
+{
+"id": "SwitchCount",
+"name": "SwitchCount",
+"description": "The number of times a lightbulb is switched on or off beginning at the 'start' given",
+"expression": "sum(eval('HOUR', abs(rollingDiff(Status))))"
+}

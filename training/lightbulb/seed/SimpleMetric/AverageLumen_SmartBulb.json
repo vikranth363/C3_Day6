@@ -1,0 +1,8 @@
+{
+ "id" : "AverageLumen_SmartBulb",
+ "name" : "AverageLumen",
+ "description" : "Average Lumen displayed over time of the SmartBulb",
+ "srcType":"SmartBulb",
+ "path": "bulbMeasurements",
+ "expression": "avg(avg(normalized.data.lumens))"
+ }

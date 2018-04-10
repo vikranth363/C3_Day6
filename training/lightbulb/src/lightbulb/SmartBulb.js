@@ -23,3 +23,48 @@ function lifeSpanInYears(bulbId){
   lifeSpanInYears = lifespan / conversionFactor;
   return lifeSpanInYears;
 }
+function shortestLifeSpanBulb(){
+	var allbulbs = SmartBulb.fetch({include:"id"});
+	var shortest = 10000;
+	var shortestBulb =' ';
+	for(var i=0;i<allbulbs.objs.length;i++)
+		{
+		   var Lifespan = lifeSpanInYears(allbulbs.objs[i].id);
+		   if(Lifespan<shortest)
+			   {
+			     shortest =Lifespan;
+			     shortestBulb = allbulbs.objs[i].id;
+			   }
+		}
+	return shortestBulb;
+}
+function longestLifeSpanBulb(){
+	var allbulbs = SmartBulb.fetch({include:"id"});
+	var longest = 0;
+	var longestBulb =' ';
+	for(var i=0;i<allbulbs.objs.length;i++)
+		{
+		   var Lifespan = lifeSpanInYears(allbulbs.objs[i].id);
+		   if(Lifespan>longest)
+			   {
+			     longest =Lifespan;
+			     longestBulb = allbulbs.objs[i].id;
+			   }
+		}
+	return longestBulb;
+}
+
+function avglifespan(){
+	
+	var x;
+	var sum=0;
+	var allbulbs = SmartBulb.fetch({include:"id"});
+	for(var y=0;y<allbulbs.objs.length;y++)
+	{
+	   x = lifeSpanInYears(y);
+	   sum+=x;
+	}
+	var avg = sum/allbulbs.obj.length;
+	return avg;
+	
+}

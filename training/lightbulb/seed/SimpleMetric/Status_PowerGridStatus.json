@@ -1,0 +1,8 @@
+{
+ "id": "Status_PowerGridStatus",
+ "name": "Status",
+ "description": "Status (1 or 0) indicating ON or OFF of the PowerGrid",
+ "srcType":"Building",
+ "path" : "gridStatus",
+ "expression" : "avg(avg(normalized.data.PowerGridStatus))"
+ }
