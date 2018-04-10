@@ -1,0 +1,2 @@
+@DFE(interval='Hour', period='Hour', metric='IsDefective')
+type SmartBulbDefective mixes TSDataFlowEvent<SmartBulb>
