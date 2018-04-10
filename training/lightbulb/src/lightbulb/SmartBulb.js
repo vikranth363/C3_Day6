@@ -32,7 +32,7 @@ function lifeSpanInYears(bulbId){
 
 
 /*
- * Returns the short lifespan of a smart bulb in years.
+ * Returns the shortest lifespan of a smart bulb .
  */
 function shortLifeSpanBulb(){
 
@@ -51,4 +51,25 @@ function shortLifeSpanBulb(){
     }
   }
   return idShortestLife;
+}
+
+/*
+ * Returns the longest lifespan of a smart bulb .
+ */
+function longLifeSpanBulb(){
+
+  var longLife = 0;
+  var idLongestLife;
+  var bulbs = SmartBulb.fetch();
+
+  for (let index = 0; index < bulbs.objs.length; index++) {
+      var lifeSpanInYears = this.lifeSpanInYears(bulbs.objs[index].id);
+
+    if (lifeSpanInYears > longLife || longLife == 0){
+        longLife = lifeSpanInYears;
+        idLongestLife = bulbs.objs[index].id
+        console.log(longLife, idLongestLife)
+    }
+  }
+  return idLongestLife;
 }
