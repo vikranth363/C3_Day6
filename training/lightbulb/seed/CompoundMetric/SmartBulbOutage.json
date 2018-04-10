@@ -1,0 +1,6 @@
+{
+"name": "SmartBulbOutage",
+"id": "SmartBulbOutage",
+"description": "The total amount of duration when lightbulb is switched on and there was outage",
+"expression": 
+}
