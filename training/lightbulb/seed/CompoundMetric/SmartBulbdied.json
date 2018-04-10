@@ -1,0 +1,6 @@
+{
+"name": "SmartBulbdied",
+"id": "SmartBulbdied",
+"description": "status is 0 in duration when lightbulb is switched on while outputting no light and there was no outage",
+"expression": "or(eval('HOUR',AverageLumens==0 && PowerGridStatus ==1 && Status ==1))?1:0"
+}
