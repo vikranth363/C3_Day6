@@ -1,0 +1,13 @@
+{
+  "id": "PowerGridStatus_SmartBulb",
+  "name": "PowerGridStatus",
+  "description": "Status indicating on/off status of power grid",
+  "srcType": "SmartBulb",
+  "path": "fixtureHistory.to.apartment.building",
+  "tsDecl": {
+    "data": "gridStatusSet",
+    "value": "value",
+    "treatment": "PREVIOUS",
+    "start": "timestamp"
+  }
+}

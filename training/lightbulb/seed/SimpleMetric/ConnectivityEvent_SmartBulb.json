@@ -1,0 +1,13 @@
+{
+  "id": "ConnectivityEvent_SmartBulb",
+  "name": "ConnectivityEvent",
+  "description": "Indicates Connectivity Event of SmartBulb",
+  "srcType" : "SmartBulb",
+  "tsDecl": {
+    "data": "bulbEvents",
+    "value": "eventType == 'Connectivity'",
+    "treatment": "OR",
+    "start": "start",
+    "end": "end"
+  }
+}

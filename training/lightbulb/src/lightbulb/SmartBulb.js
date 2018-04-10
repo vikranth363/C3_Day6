@@ -11,6 +11,9 @@
 /*
  * Returns the lifespan of a smart bulb in years.
  */
+
+
+
 function lifeSpanInYears(bulbId){
   var bulb, startTime, defectFilter, defectDatum, defectTime, lifespan, conversionFactor, lifeSpanInYears;
   bulb = SmartBulb.get({id:bulbId});
@@ -23,3 +26,47 @@ function lifeSpanInYears(bulbId){
   lifeSpanInYears = lifespan / conversionFactor;
   return lifeSpanInYears;
 }
+
+
+function shortestLifeSpanBulb(){
+	var allBulbs = SmartBulb.fetch({include:"id"});
+	var shortest = 10000;
+	var shortestBulb = '';
+	for (var i=0;i< allBulbs.objs.length;i++){
+		var life = lifeSpanInYears(allBulbs.objs[i].id);
+		if(life<shortest){
+		shortest=life;
+		shortestBulb = allBulbs.objs[i].id;
+		}
+		}
+	return shortestBulb;
+}
+
+function averageLifeSpan(bulbId)
+{
+	var allBulbs = SmartBulb.fetch({include:"id"});
+	var sum =0;
+	var average;
+	for (var j=0;j< allBulbs.objs.length;j++){
+		var lifeSpn = lifeSpanInYears(allBulbs.objs[j].id);
+		sum = sum + lifeSpn;
+	}
+	average = (sum / allBulbs.objs.length) ;
+	
+	return average;
+}
+
+function longestLifeSpanBulb(){
+	var allBulbs = SmartBulb.fetch({include:"id"});
+	var longest = 0;
+	var longestBulb = '';
+	for (var i=0;i< allBulbs.objs.length;i++){
+		var life = lifeSpanInYears(allBulbs.objs[i].id);
+		if(life>longest){
+		longest=life;
+		longestBulb = allBulbs.objs[i].id;
+		}
+		}
+	return longestBulb;
+}
+

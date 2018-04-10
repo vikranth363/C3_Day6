@@ -1,0 +1,13 @@
+{
+  "id": "LightningEvent_SmartBulb",
+  "name": "LightningEvent",
+  "description": "Indicates Lightning Event of SmartBulb",
+  "srcType" : "SmartBulb",
+  "tsDecl": {
+    "data": "bulbEvents",
+    "value": "eventType == 'Lightning'",
+    "treatment": "OR",
+    "start": "start",
+    "end": "end"
+  }
+}
