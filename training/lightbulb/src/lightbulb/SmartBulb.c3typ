@@ -59,6 +59,16 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
   fixtureHistory: [SmartBulbToFixtureRelation](from)
 
   /**
+  *
+  */
+  overheatStatus: SmartBulbOverheatStatus
+
+  /**
+  *
+  */
+  overheatStatusSet: [SmartBulbOverheatStatusSet](parent)
+  
+  /**
    * The current Fixture to which this bulb is attached.
    */
   currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'

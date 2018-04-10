@@ -5,10 +5,10 @@ function process(input) {
     var data = input.bulbOverheat.data(),
     dates = input.bulbOverheat.dates();
 
-    for (var i = 0; i < input.length; i++) {
+    for (var i = 0; i < data.length; i++) {
         if (data.at(i) > TEMPERATURE_THRESHOLD) {
             return SmartBulbOverheatStatus.make({
-                timestamp: date.at(i),
+                timestamp: dates.at(i),
             });        
         }
     }

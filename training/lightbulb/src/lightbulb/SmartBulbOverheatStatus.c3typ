@@ -10,4 +10,4 @@
 /**
  * The status of the power grid for a {@link Building}  at a specific time.
  */
-type SmartBulbOverheatStatus mixes TimedValue
+type SmartBulbOverheatStatus mixes TimedValue, Integer
