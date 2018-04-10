@@ -1,6 +1,6 @@
 {
 "name": "SmartBulbOutage",
 "id": "SmartBulbOutage",
-"description": "The total amount of duration when lightbulb is switched on and there was outage",
-"expression": 
+"description": "status is 1 in duration when lightbulb is switched on and there was outage",
+"expression": "or(eval('HOUR',AverageLumens != 0 && PowerGridStatus == 0))"
 }
