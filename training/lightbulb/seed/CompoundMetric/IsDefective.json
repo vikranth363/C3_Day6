@@ -1,0 +1,6 @@
+{
+    "id":           "IsDefective",
+    "name":         "IsDefective",
+    "description":  "Indicate if the smartbulb died",
+    "expression":   "or(eval('HOUR',Lumens == 0 && Status == 1 && PowerGridStatus == 1)) ? 1 : 0"
+}
