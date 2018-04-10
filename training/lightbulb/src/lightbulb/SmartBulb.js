@@ -17,9 +17,38 @@ function lifeSpanInYears(bulbId){
   startTime = bulb.startDate;
   defectFilter = "status == 1 && lumens == 0 && parent.id == '" + 'SBMS_serialNo_' + bulb.id + "'";
   defectDatum = SmartBulbMeasurement.fetch({filter:defectFilter});
-  defectTime = defectDatum.objs[0].end;
+  
+  if ( defectDatum.objs[0].end ){
+    defectTime = defectDatum.objs[0].end;
+  }else{
+    defectTime = 50;
+  }
+
   lifespan = defectTime - startTime;
   conversionFactor = 1000*60*60*24*365;
   lifeSpanInYears = lifespan / conversionFactor;
   return lifeSpanInYears;
+}
+
+
+/*
+ * Returns the short lifespan of a smart bulb in years.
+ */
+function shortLifeSpanBulb(){
+
+  var shortLife = 0;
+  var idShortestLife;
+  var bulbs = SmartBulb.fetch();
+
+  for (let index = 0; index < bulbs.objs.length; index++) {
+      var lifeSpanInYears = this.lifeSpanInYears(bulbs.objs[index].id);
+
+    if (lifeSpanInYears < shortLife || shortLife == 0){
+        console.log("inside if")
+        shortLife = lifeSpanInYears;
+        idShortestLife = bulbs.objs[index].id
+        console.log(shortLife, idShortestLife)
+    }
+  }
+  return idShortestLife;
 }

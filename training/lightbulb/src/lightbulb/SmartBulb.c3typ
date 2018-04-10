@@ -66,5 +66,10 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
   /**
    * A function that returns the life span in years of .
    */
-  lifeSpanInYears: function(bulbId: string): double js server 
+  lifeSpanInYears: function(bulbId: string): double js server
+
+  /**
+   * A function that returns the short life span .
+   */
+  shortLifeSpanBulb: function(): string js server 
 }
