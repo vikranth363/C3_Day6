@@ -3,11 +3,11 @@
   "name": "OverheatStatus",
   "description": "Status (1 or 0) indicating if a SmartBulb has overheated (gone above max temp of 85)",
   "srcType": "SmartBulb",
-  "path": "bulbMeasurements",
+
   "tsDecl": {
     "data": "overheatStatusSet",
     "start": "timestamp",
     "treatment": "OR",
-    "value": "temperature > 85"
+    "value": "temperature"
   }
 }
