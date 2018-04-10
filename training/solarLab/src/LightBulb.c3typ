@@ -1,0 +1,9 @@
+extendable entity type LightBulbschema name "LGHT_BLB" {  
+
+bulbType: stringenum(‘LED’, ‘INCAN’, ‘CFL’)
+
+manufacturer: Manufacturer
+
+startDate: datetime
+
+wattage: decimal

@@ -1,0 +1,14 @@
+entity type SmartBulbextends LightBulbmixes MetricEvaluatabletype key "SMRT_BLB" {
+
+  latitude: double
+  
+  longitude: double
+  
+  lumensUOM: Unit
+  
+  powerUOM: Unit
+  
+  temperatureUOM: Unit
+  
+  voltageUOM: Unit
+  

@@ -1,6 +1,11 @@
 {
-  "name": "solarLab",
-  "description": "Solar Lab Code",
-  "author": "C3IoT",
-  "dependencies": ["standardDependencies"]
+	"name": "lightbulb",
+	"description": "Application Training",
+	"author": "C3IoT",
+	"dependencies": [
+		"foundation",
+		"tools",
+		"uiFramework",
+		"exMachina"
+	]
 }

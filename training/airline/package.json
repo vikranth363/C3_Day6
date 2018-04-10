@@ -1,6 +1,8 @@
 {
-  "name": "airline",
-  "description": "Application Training",
-  "author": "Maggie Wang, Maximus Choi",
-  "dependencies": ["standardDependencies"]
+	"name": "airline",
+	"description": "Application Training",
+	"author": "Maggie Wang, Maximus Choi",
+	"dependencies": [
+		"standardDependencies"
+	]
 }

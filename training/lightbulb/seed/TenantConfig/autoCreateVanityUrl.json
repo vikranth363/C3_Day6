@@ -1,5 +1,5 @@
 {
-  "id": "AutoCreateVanityUrl",
-  "name": "AutoCreateVanityUrl",
-  "value": true
+	"id": "AutoCreateVanityUrl",
+	"name": "AutoCreateVanityUrl",
+	"value": true
 }

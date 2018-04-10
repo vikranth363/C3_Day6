@@ -1,5 +1,5 @@
 {
-  "id": "JMSEnabled",
-  "name": "JMS connectivity enabled",
-  "value": true
+	"id": "JMSEnabled",
+	"name": "JMS connectivity enabled",
+	"value": true
 }

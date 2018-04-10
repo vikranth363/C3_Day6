@@ -1,5 +1,5 @@
 {
-  "id": "FlightClimbRate",
-  "name": "FlightClimbRate",
-  "expression": "rollingDiff(AverageFlightAttitude)"
+	"id": "FlightClimbRate",
+	"name": "FlightClimbRate",
+	"expression": "rollingDiff(AverageFlightAttitude)"
 }

@@ -1,0 +1,7 @@
+function expectedLumens(wattage, bulbType) {
+  if(bulbType == 'LED')
+    return wattage * 84;
+  if(bulbType == 'INCAN')
+    return wattage * 14;
+  if(bulbType == 'CFL')
+    return wattage * 62;
