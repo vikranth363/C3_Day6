@@ -1,0 +1,4 @@
+type SmartBulbDefectAlert mixes Analytic<SmartBulbDefectInput, SmartBulbEvent> 
+{
+    process : ~ js server
+}

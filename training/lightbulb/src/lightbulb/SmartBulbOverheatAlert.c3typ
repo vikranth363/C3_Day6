@@ -1,0 +1,4 @@
+type SmartBulbOverheatAlert mixes Analytic<SmartBulbOverheatInput, SmartBulb> 
+{
+    process : ~ js server
+}

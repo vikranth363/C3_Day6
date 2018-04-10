@@ -3,11 +3,6 @@
     "name": "ZeroLumen",
     "srcType": "SmartBulb", 
     "description": "Returns a 1 if an lumen is zero",
-    "tsDecl": {
-                 "data": "bulbEvents",
-                 "start": "start",
-                 "end": "end",
-                 "treatment": "OR",
-                 "value": "lumens==0"
-               }
+    "path" : "bulbMeasurements",
+    "expression" : "avg(avg(normalized.data.lumens))"
 }
