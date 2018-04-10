@@ -7,3 +7,5 @@ manufacturer: Manufacturer
 startDate: datetime
 
 wattage: decimal
+
+}
