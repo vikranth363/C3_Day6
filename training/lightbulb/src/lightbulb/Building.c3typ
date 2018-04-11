@@ -18,6 +18,11 @@ entity type Building mixes MetricEvaluatable schema name "BLDNG" {
   apartments: [Apartment](building)
 
   /**
+   * Finds the average temperature of all {@link SmartBulb}s in this building.
+   */
+  averageSmartBulbTemperature: member function(datetime: datetime): double js server
+
+  /**
    * This building's power grid status history in a descending order.
    */
   @db(order='descending(timestamp)')

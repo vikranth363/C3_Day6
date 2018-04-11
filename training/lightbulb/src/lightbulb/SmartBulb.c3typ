@@ -21,6 +21,18 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    * This bulb's historical events.
    */
   bulbEvents: [SmartBulbEvent](smartBulb)
+  
+  /**
+   * This Smartbulbs power overheating status history in a descending order.
+   */
+  @db(order='descending(timestamp)')
+  bulbOverheatStatusSet: [SmartBulbOverheatStatusSet](parent)
+
+  /**
+   * Latest status of this bulb's temperature relative to the overheating threshold.
+   */
+  @db(timedValueHistoryField='bulbOverheatStatusSet')
+  bulbOverheatStatus: SmartBulbOverheatStatus
 
   /**
    * The latitude of this bulb.
@@ -58,31 +70,34 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
   @db(order='descending(start), descending(end)')
   fixtureHistory: [SmartBulbToFixtureRelation](from)
 
-  // New overheatstatus
-  @db(order='descending(timestamp)')
-  smartBulbOverheatStatusSet: [SmartBulbOverheatStatusSet](parent)
-
-  
-  @db(timedValueHistoryField='smartBulbOverheatStatusSet')
-  smartBulbOverheatStatus: SmartBulbOverheatStatus
-
   /**
    * The current Fixture to which this bulb is attached.
    */
   currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
 
   /**
-   * A function that returns the life span in years of .
+   * Method to determine the expected lumens of a light bulb
    */
-  lifeSpanInYears: function(bulbId: string): double js server 
+  expectedLumens: function(wattage: !decimal, bulbType: !string): double js server
 
+  /**
+   * Returns the life span of this smartBulb
+   */
+  lifeSpanInYears: function(bulbId: string): double js server
+
+  /**
+   * Returns the average life span of all smartBulbs.
+   */
+  averageLifeSpan: function(): double js server
+
+  /**
+   * Returns the id of the smart bulb with the shortest recorded life span to date.
+   */
   shortestLifeSpanBulb: function(): string js server
 
-  avgLifeSpanBulb: function(): string js server
+  /**
+   * Returns the id of the smart bulb with the longest recorded life span to date.
+   */
+  longestLifeSpanBulb: function(): string js server
 
-  longLifeSpanBulb: function(): string js server
-
-  tempBulb: function(bulbId: string): string js server
-
-  mediumTempBuild: function(buildId: string): string js server
 }

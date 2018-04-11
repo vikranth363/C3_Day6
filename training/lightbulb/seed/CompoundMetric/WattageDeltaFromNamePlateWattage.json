@@ -1,0 +1,6 @@
+{
+    "name": "WattageDeltaFromNamePlateWattage",
+    "id": "WattageDeltaFromNamePlateWattage",
+    "expression": "AveragePower > 0 ? (NamePlateWattage - AveragePower) : 0",
+    "unit": { "id": "kilowatt_hour" }
+}

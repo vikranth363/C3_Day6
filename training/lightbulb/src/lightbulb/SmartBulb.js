@@ -36,143 +36,57 @@ function lifeSpanInYears(bulbId){
 }
 
 /*
-*
-*/
-
+ * Returns the id of the smart bulb with the shortest recorded life span to date.
+ */
 function shortestLifeSpanBulb(){
-  var bulb;
-  bulb = SmartBulb.fetch();
-  var min =9999999;
-  var app = "";
-  for (var i=0;i<bulb.count;i++)
-  {
-  
-   if(lifeSpanInYears(bulb.objs[i].id)<min)
-   {
-      app=bulb.objs[i].id;
-      min=lifeSpanInYears(bulb.objs[i].id);
-   }
+  var lightbulbs, shortestId, shortestVal, span, bulbId, lifespans = [];
+  lightbulbs = SmartBulb.fetch({include:"id",limit:-1}).objs;
+  shortestVal = 1000;
+  for (var i = 0; i < lightbulbs.length; i++) {
+    bulbId = lightbulbs[i].id;
+    span = SmartBulb.lifeSpanInYears(bulbId);
+    lifespans.push(span);
+    if (span < shortestVal){
+      shortestVal = span;
+      shortestId = bulbId;
+    }
   }
-  if(min==9999999) {
-    return 0;
-  }
-  else
-  {
-    return app;
-  }
+  return shortestId;
 }
 
 /*
-*
-*/
-
-
-function avgLifeSpanBulb(){
-  var bulb;
-  bulb = SmartBulb.fetch();
-  
-  var app = 0;
-  var res = 0;
-  for (var i=0;i<bulb.count;i++)
-  {
-  
-   app+=lifeSpanInYears(bulb.objs[i].id);
-  
+ * Returns the id of the smart bulb with the longest recorded life span to date.
+ */
+function longestLifeSpanBulb(){
+  var lightbulbs, longestId, longestVal, span, bulbId, lifespans = [];
+  lightbulbs = SmartBulb.fetch({include:"id",limit:-1}).objs;
+  longestVal = 0;
+  for (var i = 0; i < lightbulbs.length; i++) {
+    bulbId = lightbulbs[i].id;
+    span = SmartBulb.lifeSpanInYears(bulbId);
+    lifespans.push(span);
+    if (span > longestVal){
+      longestVal = span;
+      longestId = bulbId;
+    }
   }
-  
- res = app/bulb.count;
- return res;
+  return longestId;
 }
 
 /*
-*
-*/
-
-function longLifeSpanBulb(){
-  var bulb;
-  bulb = SmartBulb.fetch();
-  var max=0;
-  var app = "";
-  for (var i=0;i<bulb.count;i++)
-  {
-  
-   if(lifeSpanInYears(bulb.objs[i].id)>max)
-   {
-      app=bulb.objs[i].id;
-      max=lifeSpanInYears(bulb.objs[i].id);
-   }
+ * Returns the average life span of all smart bulbs.
+ */
+function averageLifeSpan(){
+  var lightbulbs, sum, avg, span, bulbId, lifespans = [];
+  lightbulbs = SmartBulb.fetch({include:"id",limit:-1}).objs;
+  sum = 0;
+  for (var i = 0; i < lightbulbs.length; i++) {
+    bulbId = lightbulbs[i].id;
+    span = SmartBulb.lifeSpanInYears(bulbId);
+    lifespans.push(span);
+    sum += span;
   }
-  if(max==0) {
-    return 0;
-  }
-  else
-  {
-    return app;
-  }
+  avg = sum / lightbulbs.length;
+
+  return avg;
 }
-
-/*
-*
-*/
-
-function tempBulb(bulbId){
-  var bulb, startTime, defectFilter, defectDatum, defectTime, lifespan, conversionFactor, lifeSpanInYears;
-  bulb = SmartBulb.get({id:bulbId});
-  
-  defectFilter = " status == 1 && parent.id == '" + 'SBMS_serialNo_' + bulb.id + "'";
-  defectDatum = SmartBulbMeasurement.fetch({filter:defectFilter});
-  var max = new Date(-8640000000000000);
-  var temp;
-  for(var i = 0;i<defectDatum.count;i++)
-  {
-     endTime = defectDatum.objs[i].end;
-     if(endTime>max)
-     {
-     temp=defectDatum.objs[i].temperature;
-     max = endTime;
-     }
-  }
-  return temp;
-  
-}
-
-/*
-*
-*/
-
-function mediumTempBuild(buildId)
-{
-  var apartaments, fixtures;
-   apartaments = Apartment.fetch();
-   var apartaments_id = [];
-   for(var i=0;i<apartaments.count;i++)
-   {
-     if(apartaments.objs[i].building.id==buildId)
-     apartaments_id.push(apartaments.objs[i].id);
-   }
-
-   var fixtures = Fixture.fetch();
-   var smartBulbs = [];
-   for(var j =0;j<apartaments_id.length;j++)
-   {
-     for(var k = 0;k<fixtures.count;k++)
-     {
-       if(apartaments_id[j]==fixtures.objs[k].apartment.id)
-       {
-         smartBulbs.push(fixtures.objs[k].currentBulb.id);
-       }
-     }
-   }
-var som =0;
-for (var m=0;m<smartBulbs.length;m++)
-{
-  som+=tempBulb(smartBulbs[m]);
-}
-
-var fin;
-fin = som/smartBulbs.length;
-return fin;
-
-}
-
-
