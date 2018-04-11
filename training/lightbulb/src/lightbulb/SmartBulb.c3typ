@@ -68,4 +68,13 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    */
   lifeSpanInYears: function(bulbId: string): double js server 
   shortestLifeSpanBulb: function(): string js server
+  
+  @db(order='descending(timestamp)')
+  OverheatStatusSet: [SmartBulbOverheatStatusSet](parent)
+
+  /**
+   * Latest status of this building's power grid.
+   */
+  @db(timedValueHistoryField='OverheatStatusSet')
+  OverheatStatus: SmartBulbOverheatStatus
 }
