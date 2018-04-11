@@ -1,6 +1,6 @@
 {
-    "name": "SmartBulbSwitchOnDuration",
-    "id": "SmartBulbSwitchOnDuration",
+    "name": "DurationOnInHours",
+    "id": "DurationOnInHours",
     "description": "Duration that smart bulb is on in a given time interval",
     "expression": "rolling('SUM',sum(eval('HOUR', Status)))"
 }

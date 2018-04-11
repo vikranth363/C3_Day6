@@ -1,6 +1,5 @@
 {
-"id":"LightBulbDeadConditionCheck",
-"name":"LightBulbDeadConditionCheck",
+"id":"IsDefective",
+"name":"IsDefective",
 "expression":"or(eval('HOUR',AverageLumens==0 && PowerGridStatus ==1 && Status ==1))?1:0"
-
 }

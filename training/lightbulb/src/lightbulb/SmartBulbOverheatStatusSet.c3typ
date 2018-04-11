@@ -1,0 +1,7 @@
+@db(datastore='cassandra',
+    partitionKeyField='parent',
+    persistenceOrder='timestamp',
+    persistDuplicates=false,
+    shortId=true,
+    shortIdReservationRange=100000)
+entity type SmartBulbOverheatStatusSet mixes TimedValueHistory<SmartBulb>, Integer schema name 'SMT_BLB_OVR_HT_STS_ST'
