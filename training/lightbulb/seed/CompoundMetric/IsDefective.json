@@ -1,0 +1,6 @@
+{
+"name": "IsDefective",
+"id": "IsDefective",
+"description": "Whether the light bulb is defective or not",
+"expression": "or(eval('HOUR', AverageLumen==0 && Status ==1 && PowerGridStatus == 1))"
+}

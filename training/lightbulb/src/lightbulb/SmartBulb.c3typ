@@ -74,6 +74,7 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    */
   shortestLifeSpanBulb: function(): string js server 
   
+  
     /**
    * A function that returns shortest life span .
    */
@@ -83,5 +84,12 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    * A function that returns the average life span in years of .
    */
   averageLifeSpan: function(bulbId: string): double js server 
+  
+  
+  @db(order='descending(timestamp)')
+  overheatStatusSet: [SmartBulbOverheatStatusSet](parent)
+  
+  @db(timedValueHistoryField='overheatStatusSet')
+  overheatStatus: SmartBulbOverheatStatus
   
 }

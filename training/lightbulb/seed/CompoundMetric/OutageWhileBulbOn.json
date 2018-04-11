@@ -1,0 +1,6 @@
+{
+"name": "OutageWhileBulbOn",
+"id": "OutageWhileBulbOn",
+"description": "The smartbulb with the event outage while the bulb is on",
+"expression": "or(eval('HOUR', Status * OutageEvent))"
+}
