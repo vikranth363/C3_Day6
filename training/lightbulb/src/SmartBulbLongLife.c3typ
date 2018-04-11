@@ -1,0 +1,2 @@
+@DFE(interval='Hour',period='Hour',metric='DurationOnInHours')
+type SmartBulbLongLife mixes TSDataFlowEvent<SmartBulb>
