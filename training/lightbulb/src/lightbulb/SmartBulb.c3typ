@@ -63,4 +63,17 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
    */
   currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
 
+  @db(timedValueHistoryField='overHeatStatusSet')
+  overHeatStatus: OverheatStatus
+
+  @db(order='descending(timestamp)')
+  overHeatStatusSet:[OverheatStatusSet](parent)
+  
+  expectedLumens: function(wattage: !double, bulbType: !string): double js server
+
+  lifeSpanInYears: function(builbId: !string): double js server
+
+  shortestLifeSpanBulb: function( ): string js server
+
+  averageLifeSpan: function( ): double js server
 }

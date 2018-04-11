@@ -1,0 +1,6 @@
+{
+    "id": "DeadBulb",
+    "name": "DeadBulb",
+    "description": "Identifies a dead bulb",
+    "expression": "or(eval('HOUR',AverageLumens==0 && Status==1 && PowerGridStatus==1))"
+}

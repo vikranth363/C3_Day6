@@ -1,0 +1,2 @@
+@DFE(interval='Hour', period='Day', metric='MaxTemperature')
+type Overheat mixes TSDataFlowEvent<SmartBulb> 
