@@ -1,0 +1,6 @@
+{
+  "name": "OutageWhileBulbOn",
+  "id": "OutageWhileBulbOn",
+  "description": "Indicator (1) when there was both an outage and the smart bulb was on (outage while on)",
+  "expression": "sum(eval('HOUR', AverageLumens != 0 && Status == 1 && PowerGridStatus == 0)) ? 1 : 0"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "MaxTemperature_SmartBulb",
+  "name": "MaxTemperature",
+  "description": "Max temperature over time of the SmartBulb",
+  "srcType":"SmartBulb",
+  "path": "bulbMeasurements",
+  "expression": "max(max(normalized.data.temperature))"
+}

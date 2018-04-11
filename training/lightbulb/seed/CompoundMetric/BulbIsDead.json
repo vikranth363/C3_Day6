@@ -1,0 +1,6 @@
+{
+  "name": "BulbIsDead",
+  "id": "BulbIsDead",
+  "description": "Indicator (1 or 0) if the lightbulb died. That is, if the lightbulb is on while outputting no light, and whenPowerGridStatus !=0",
+"expression": "sum(eval('HOUR', AverageLumens == 0 && Status == 1)) ? 1 : 0"
+}

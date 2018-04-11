@@ -1,0 +1,2 @@
+@DFE(interval='Hour', period='Hour', metric='AverageTemperature')
+type SmartBulbTemperature mixes TSDataFlowEvent<SmartBulb>

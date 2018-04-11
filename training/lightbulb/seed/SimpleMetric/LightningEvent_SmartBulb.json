@@ -1,0 +1,13 @@
+{
+  "id": "LightningEvent_SmartBulb",
+  "name": "LightningEvent",
+  "srcType": "SmartBulb",
+  "description": "Returns a 1 if a lightning event occurred, or a 0 if not",
+  "tsDecl": {
+    "data": "bulbEvents",
+    "start": "start",
+    "end": "end",
+    "treatment": "OR",
+    "value": "eventType == Lightning"
+  }
+}
