@@ -1,6 +1,7 @@
 {
-  "name": "lightbulb",
-  "description": "Application Training",
-  "author": "FrancescoDiGirolamo",
-  "dependencies": ["standardDependencies"]
+  "name" : "lightbulb",
+  "description" : "Lightbulb",
+  "author" : "f.digirolamo@aubay.it",
+  "dependencies" : ["standardDependencies"],
+  "sequence" : 26
 }

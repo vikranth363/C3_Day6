@@ -21,4 +21,5 @@ function process(input)
             smartBulb = SmartBulb.make({id:smartBulbId,smartBulbOverheatStatus:{timestamp:timestamp,value:1}})
         }
     }
+    return smartBulb;
 }

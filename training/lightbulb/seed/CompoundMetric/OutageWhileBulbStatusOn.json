@@ -1,7 +1,6 @@
 {
-    "id": "OutageWhileBulbStatusOn",
     "name": "OutageWhileBulbStatusOn",
-    "description":"Indicator (1 or 0) if an outage event occurred",
-    "expression":"eval('HOUR',Status * OutageEvent)"
-  }
-  
+    "id": "OutageWhileBulbStatusOn",
+    "description": "Indicator (1 or 0) if an outage event occurred while the bulb was on",
+    "expression": "or(eval('HOUR', Status * OutageEvent))"
+}
