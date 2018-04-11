@@ -1,0 +1,31 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+ * A single fixture in which a single {@link SmartBulb} may be connected.
+ */
+entity type Fixture mixes MetricEvaluatable schema name "FXTR" {
+
+  /**
+   * The {@link Apartment} in which this fixture is located.
+   */
+  apartment: Apartment
+
+  /**
+   * The current {@link SmartBulb} attached to this fixture.
+   */
+  currentBulb: SmartBulb stored calc 'bulbHistory[0].(end == null).from'
+
+  /**
+   * A fixture is associated to a {@link SmartBulb} through a {@link SmartBulbToFixtureRelation}.
+   */
+  @db(order='descending(toUTC(start)), descending(toUTC(end))')
+  bulbHistory: [SmartBulbToFixtureRelation](to)
+
+}

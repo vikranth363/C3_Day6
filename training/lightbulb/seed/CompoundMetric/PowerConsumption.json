@@ -1,0 +1,6 @@
+{
+    "name": "PowerConsumption",
+    "id": "PowerConsumption",
+    "expression": "rolling('SUM',sum(eval('HOUR', AveragePower))) / 1000",
+    "unit": { "id": "kilowatt_hour" }
+}

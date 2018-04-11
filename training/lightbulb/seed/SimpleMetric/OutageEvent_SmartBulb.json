@@ -1,0 +1,14 @@
+{
+  "id": "OutageEvent_SmartBulb",
+  "name": "OutageEvent",
+  "description": "Indicating an Outage Event of a SmartBulb.",
+  "srcType" : "SmartBulb",
+  "tsDecl": {
+    "data": "bulbEvents",
+    "value": "eventType == 'Outage'",
+    "treatment": "OR",
+    "start": "start",
+    "end": "end",
+    "transform": "fillMissing(this, 0)"
+  }
+}

@@ -1,6 +1,8 @@
 {
-  "name": "lightbulb",
-  "description": "Application Training",
-  "author": "C3 IoT",
-  "dependencies": ["standardDependencies"]
+  "name" : "lightbulb",
+  "description" : "Lightbulb PM package",
+  "author" : "nikolai.oudalov@c3iot.com",
+  "icon" : "https://images-na.ssl-images-amazon.com/images/I/31YTbFv6TRL._SL500_AC_SS350_.jpg",
+  "dependencies" : [ "standardDependencies", "machineLearning"],
+  "sequence" : 26
 }

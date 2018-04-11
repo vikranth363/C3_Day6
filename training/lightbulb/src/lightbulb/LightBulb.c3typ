@@ -1,0 +1,35 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+ * A single light bulb.
+ */
+extendable entity type LightBulb schema name "LGHT_BLB" {
+
+  /**
+   * The type of this light bulb.
+   */
+  bulbType: string enum('LED', 'INCAN', 'CFL')
+
+  /**
+   * The light bulb's wattage
+   */
+  wattage: decimal
+
+  /**
+   * The name of this light bulb's manufacturer.
+   */
+  manufacturer: Manufacturer
+
+  /**
+   * The time at which this light bulb was manufactured.
+   */
+  startDate: datetime
+
+}

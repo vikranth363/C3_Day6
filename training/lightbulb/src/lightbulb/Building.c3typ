@@ -1,0 +1,37 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+ * A single building containing many {@link Apartment}s.
+ */
+entity type Building mixes MetricEvaluatable schema name "BLDNG" {
+
+  /**
+   * The apartments that are inside this building.
+   */
+  apartments: [Apartment](building)
+
+  /**
+   * Finds the average temperature of all {@link SmartBulb}s in this building.
+   */
+  averageSmartBulbTemperature: member function(datetime: datetime): double js server
+
+  /**
+   * This building's power grid status history in a descending order.
+   */
+  @db(order='descending(timestamp)')
+  gridStatusSet: [PowerGridStatusSet](parent)
+
+  /**
+   * Latest status of this building's power grid.
+   */
+  @db(timedValueHistoryField='gridStatusSet')
+  gridStatus: PowerGridStatus
+
+}

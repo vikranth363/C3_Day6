@@ -1,0 +1,6 @@
+{
+    "name": "CumulativeSwitchCount",
+    "id": "CumulativeSwitchCount",
+    "description": "The total number of times a lightbulb is switched on or off up to the interval",
+    "expression": "rolling('SUM', SwitchCount)"
+}

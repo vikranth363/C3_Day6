@@ -1,0 +1,7 @@
+{
+  "id": "NamePlateWattage_SmartBulb",
+  "name": "NamePlateWattage",
+  "description": "nameplate wattage of the SmartBulb",
+  "expression": "identity(wattage)",
+  "srcType": "SmartBulb"
+}
