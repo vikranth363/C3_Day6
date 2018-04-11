@@ -6,7 +6,7 @@ function process(input)
 {
     var data=input.temperature.data(),
         dates=input.temperature.dates(),
-        smartBulb={};
+        smartBulb={}; //input.source
     for(var i=0;i<data.length;i++)
     {
         var smartBulbId = input.source.id,
@@ -14,6 +14,7 @@ function process(input)
 
         if(data.at(i)<TEMP)
         {
+            //smartBulb.smartBulbOverheatStatus = {timestamp:timestamp, value:0}
           smartBulb = SmartBulb.make({id:smartBulbId,smartBulbOverheatStatus:{timestamp:timestamp,value:0}});
         }
         else
@@ -21,4 +22,6 @@ function process(input)
             smartBulb = SmartBulb.make({id:smartBulbId,smartBulbOverheatStatus:{timestamp:timestamp,value:1}})
         }
     }
+    // return just smartBulb Object
+    return smartBulb;
 }
