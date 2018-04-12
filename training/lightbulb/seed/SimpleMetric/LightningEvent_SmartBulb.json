@@ -10,5 +10,4 @@
         "treatment":"OR",
         "value":"eventType=='Lightning'"
     }
-
 }
