@@ -1,0 +1,13 @@
+
+@db(compactType=true,
+datastore='cassandra',
+partitionKeyField='parent',
+persistenceOrder='start',
+shortId=true,
+shortIdReservationRange=100000)
+
+entity type AggregateConsumptionByManufacturer schema name "AGG_CNS_MFG" {
+    parent:                 Manufacturer
+    start:                  datetime
+    aggregateConsumption:   double
+}
