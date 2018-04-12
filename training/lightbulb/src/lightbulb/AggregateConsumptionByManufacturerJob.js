@@ -28,7 +28,7 @@ function map(batch, objs, job) {
     end:  "2017-01-01",
     interval: "MONTH",
     rollupFunc: "SUM" ,
-    expressions: "AveragePower" });
+    expressions: ["AveragePower"] });
   
     var data = metricResults.AveragePower.data();
     var dates = metricResults.AveragePower.dates();
