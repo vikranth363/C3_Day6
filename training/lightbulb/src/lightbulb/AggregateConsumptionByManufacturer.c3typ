@@ -11,7 +11,7 @@
     shortIdReservationRange=100000
 )
 
-entity type AggregateConsumptionByManufacturerschema name "AGG_CNS_MFG" {  
+entity type AggregateConsumptionByManufacturer schema name "AGG_CNS_MFG" {  
     parent: Manufacturer  
     start: datetime
     aggregateConsumption: double
