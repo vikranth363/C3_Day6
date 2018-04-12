@@ -23,12 +23,12 @@ function map(batch, objs, job) {
   // Iterate over each manufacturer, aggregating metric results for all related light bulbs
   manufacturers.each(function (manufacturer) {
     var metricResults = SmartBulb.rollupMetrics({
-    filter: 
-    start: 
-    end:  
-    interval: 
-    rollupFunc:  
-    expressions: });
+    filter: "",
+    start: "2011-01-01",
+    end:  "2016-01-01",
+    interval: "HOUR",
+    rollupFunc: "" ,
+    expressions: "AveragePower" });
   
     var data = metricResults.AveragePower.data();
     var dates = metricResults.AveragePower.dates();
