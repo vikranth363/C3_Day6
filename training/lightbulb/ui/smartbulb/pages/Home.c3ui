@@ -1,0 +1,201 @@
+/*
+* Copyright 2009-2017 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+ui module smartbulb {
+    page Home {
+        "id": "smartbulb.Home",
+        "name": "Home",
+        "template": "smartbulb.Dashboard1x4",
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
+        "title": "Home",
+        "url": "home",
+        "components": [
+            {
+                "id": "SideMenu",
+                "component": "smartbulb.Menu",
+                "renderTo": "#side-menu",
+                "activeItem": "smartbulb",
+                "menu": [
+                    {
+                        "items": [
+                            {
+                                "id": "smartbulb",
+                                "iconImageUrl": "/assets/images/analytics.svg",
+                                "title": "Smart Bulb Failure Prediction",
+                                "appId": "smartbulb",
+                                "pageId": "Home"
+                            }
+                        ]
+                    },
+                    {
+                        "footer": true,
+                        "items": [
+                            {
+                                "id": "settings",
+                                "iconImageUrl": "/assets/images/menu/user_options.svg",
+                                "title": "User Options",
+                                "url": "#",
+                                "linkClass": "settings"
+                            }
+                        ]
+                    }
+                ],
+                "behavior": [
+                    {
+                        "query": "$ a[href!='#']",
+                        "trigger": "click",
+                        "action": {
+                            "type": "Navigate"
+                        }
+                    },
+                    {
+                        "query": "$ a.settings",
+                        "trigger": "click",
+                        "action": {
+                            "type": "ShowUserSettingsPopover",
+                            "options": {
+                                "about": true,
+                                "profile": true,
+                                "logout": true
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "Map",
+                "component": "Map",
+                "icon": "map-marker",
+                "name": "Map",
+                "box": true,
+                "title": "Status Map",
+                "autoLoadData": true,
+                "lat": "latitude",  //delete when done// this is how we reference the field "'latitude'" from the data source.
+                "lng": "longitude",  //delete when done// this is how we reference the field "'longitude'" from the data source.
+                "autocenter": true,
+                "cluster": false,
+                "mapConfig": {
+                    "mapTypeId": "roadmap"
+                },
+                "components": [
+                    {
+                        "component": "Tooltip",
+                        "id": "PhantomTooltip",
+                        "renderTo": ".phantom-tooltip"
+                    }
+                ],
+                "renderTo": "#RightColRow1",
+                "height": 556,
+                "markerColors": [
+                    {
+                        "id": "1",
+                        "color": "#fc3d00",
+                        "display": "if 'bulbOverheatStatus.value > 0.5' then color = #fc3d00",
+                        "field": "bulbOverheatStatus.value",   //delete when done// here, we reference the bulbOverheatStatus.value for the SmartBulb in order to color the map markers.
+                        "value": "0.5",
+                        "comparator": ">"
+                    }
+                ],
+                "useInfoWindowTpl": false,
+                "data": {
+                    "collection": "smartbulb.Bulbs"
+                },
+                "allowGeoFilter": false,
+                "showNumberOfRecords": false
+            },
+            {
+                "id": "Grid",
+                "component": "KendoGrid",
+                "icon": "align-justify",
+                "name": "Grid",
+                "box": true,
+                "paginate": true,
+                "title": "Lightbulb Details",
+                "data": {
+                    "collection": "smartbulb.Bulbs"  //delete when done// here we identify the datasource that will populate this field.
+                },
+                "filterable": false,
+                "renderTo": "#RightColRow2",  //delete when done// note that this is the location of the component on the page.
+                "height": 556,
+                "titleUrl": null,
+                "aggregate": null,
+                "small": false,
+                "checkBoxes": false,
+                "columns": [  //delete when done// this contains a list of columns and their configuration.
+                    {
+                        "id": "id",  //delete when done// this indicates the 'id' of the column.
+                        "field": "id",  //delete when done// this indicates the field from the data source that populates the column.
+                        "label": "Bulb ID"  //delete when done// this indicates the label of the column
+                    },
+                    {
+                        "id": "",  //delete when done//  please build a column that displays the bulbType field on a SmartBulb (and adjust the data source!).
+                        "field": "",
+                        "label": ""
+                    },
+                    {
+                        "id": "",  //delete when done//  please build a column that displays the manufacturer of a SmartBulb (and adjust the data source!).
+                        "field": "",
+                        "label": ""
+                    },
+                    {
+                        "id": "",  //delete when done//  please build a column that displays the startDate field on a SmartBulb (and adjust the data source!).
+                        "field": "",
+                        "label": "",
+                        "format": "time"
+                    },
+                    {
+                        "id": "bulbOverheatStatus.value",  //delete when done//  Please adjust the data source in order to populate this column.
+                        "field": "bulbOverheatStatus.value",
+                        "label": "Overheat Status"
+                    }
+                ]
+            },
+            {
+                "id": "FilterPanel",
+                "component": "FilterPanel",
+                "icon": "lightbulb",
+                "name": "FilterPanel", 
+                "box": false,
+                "title": "Filter",
+                "filterForm": {
+                    "component": "FilterForm",
+                    "filters": [  
+                        {
+                            "id": "manufacturer",  //delete when done//  Please adjust the data source in order to populate this filter.
+                            "field": "manufacturer",
+                            "label": "Manufacturer",
+                            "dataType": "string",  //delete when done// This indicates what the data type of the input text will be.
+                            "comparator": false,  //delete when done// This defaults to '==', but can be any comparison-operator.
+                            "component": "field.Text",  //delete when done// This indicates the type of filter, other options can be a dropdown, radio button, etc.
+                            "typeahead": {
+                                "c3type": "Manufacturer"
+                            }
+                        },
+                        {
+                            "id": "",  //delete when done//  Please create a filter on the bulbType field.
+                            "field": "",
+                            "label": "",
+                            "dataType": "",
+                            "comparator": false,
+                            "component": ""
+                        }
+                    ],
+                    "id": "FilterForm"
+                },
+                "renderTo": "#LeftCol",
+                "height": 556,
+                "data": {
+                    "collection": "smartbulb.Bulbs"
+                },
+                "geoFilterText": "Geographical Filtering",
+                "allowGeoFilter": false
+            }
+        ]
+    }
+}

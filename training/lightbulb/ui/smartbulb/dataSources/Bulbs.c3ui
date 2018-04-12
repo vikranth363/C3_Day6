@@ -1,0 +1,34 @@
+/*
+* Copyright 2009-2017 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+ui module smartbulb {
+    dataSource Bulbs {
+        "collection": true,
+        "c3function": "", //delete when done// what function should be called on the below defined c3type?
+        "c3arguments": {
+            "spec": {
+                "limit": "", //delete when done// what is a reasonable limit to put on this query?
+                "include": "id, latitude, longitude" //delete when done// what other fields should the include spec contain to populate your dashboard?
+            }
+        },
+        "c3type": "SmartBulb",
+        "name": "Bulbs",
+        "responseSelector": "objs",
+        "record": false,
+        "responseTransform": {
+            "combine": false,
+            "rootProperty": false,
+            "firstItem": false,
+            "order": false,
+            "tuples": false,
+            "fields": false
+        },
+        "id": "smartbulb.Bulbs"
+    }
+}

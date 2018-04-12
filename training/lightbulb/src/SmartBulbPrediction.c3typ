@@ -1,0 +1,37 @@
+/*
+* Copyright 2009-2018 C3 IoT, Inc. All Rights Reserved.
+* This material, including without limitation any software, is the confidential trade secret
+* and proprietary information of C3 IoT and its licensors. Reproduction, use and/or distribution
+* of this material in any form is strictly prohibited except as set forth in a written
+* license agreement with C3 IoT and/or its authorized distributors.
+* This product may be covered by one or more U.S. patents or pending patent applications.
+~*/
+
+/**
+ * A prediction made for a single {@link SmartBulb}.
+ */
+ @db(compactType=true,
+  datastore='cassandra',
+  partitionKeyField='smartBulb',
+  persistenceOrder='timestamp',
+  persistDuplicates=false,
+  shortId=true,
+  shortIdReservationRange=100000)
+entity type SmartBulbPrediction schema name "SMRT_BLB_PRDCTN" {
+
+  /**
+   * The calculated risk score for this SmartBulb
+   */
+  prediction: double
+
+  /**
+   * The {@link SmartBulb} for which this prediction was made.
+   */
+  smartBulb: SmartBulb
+
+  /**
+   * The time at which this prediction was made.
+   */
+  timestamp: datetime
+
+}

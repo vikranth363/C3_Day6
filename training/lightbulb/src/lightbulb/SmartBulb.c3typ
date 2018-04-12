@@ -18,6 +18,17 @@ entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_B
   bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
 
   /**
+   * This bulb's historical predictions.
+   */
+  @db(order='descending(timestamp)')
+  bulbPredictions: [SmartBulbPrediction](smartBulb)
+
+  /**
+   * This bulb's latest prediction.
+   */
+  currentPrediction: SmartBulbPrediction stored calc "bulbPredictions[0]"
+
+  /**
    * This bulb's historical events.
    */
   bulbEvents: [SmartBulbEvent](smartBulb)
