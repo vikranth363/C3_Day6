@@ -54,7 +54,7 @@ function reduce(key, objs, job) {
   var mfg = Manufacturer.get(manufacturer);
 
   var pwrCons = AggregateConsumptionByManufacturer.make({
-    parent: manufacturer,
+    parent: mfg,
     start: date,
     aggregateConsumption: total
   });
