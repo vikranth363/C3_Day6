@@ -10,4 +10,4 @@
 /** 
  * An company that manufacturers lightbulbs. 
  */
-entity type Manufacturer mixes MetricEvaluatable schema name "MNFCT"
+entity type Manufacturer mixes MetricEvaluatable schema name "MANUF"

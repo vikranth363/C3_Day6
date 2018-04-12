@@ -1,0 +1,10 @@
+entity type AggregateConsumptionByManufacturerJobmixes MapReduce<SmartBulb, string, double, Void> type key 'AGG_CNS_MFG' { 
+    // start of the evaluation 
+    intervalstartDate: datetime
+    // end of the evaluation 
+    intervalendDate: datetime
+    // metric evaluation interval
+    interval: string
+    map:       ~ js server 
+    reduce:    ~ js server
+    }
